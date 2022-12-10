@@ -44,6 +44,11 @@ aside#left{
 	margin-right: 1em;
 }
 
+#buttons{
+	display: block;
+	margin: 3px 42px
+}
+
 aside#left ul{list-style: none}
 
 aside#left ul li{
@@ -66,9 +71,14 @@ aside#left ul li:hover{
 aside#main{
 	float: left;
 }
-/*가운데 본문 영역*/
+/*가운데 본문 영역 & 이미지 가운데정렬*/
 section#main{
 	float: left;
+	position: absolute;
+	z-index: 99;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 
 /*오른쪽사이드메뉴*/
@@ -83,10 +93,12 @@ aside#right #login input{
 }
 
 /*footer영역*/
+/*
 footer{
 	clear: both;
-	background-color: #333333;
+	background-color: #333333c3;
 	color: white;
 	text-align: center;
 	padding: 1em 0px;
 }
+*/

@@ -26,23 +26,45 @@
 			<li><a href="./Bag.html" target="iframe1">Bag</a></li>
 		</ul>
 	</aside>
-	<section id="main">
-		<article>
-			<iframe name="ifram1" src="rankArtist.html" frameborder="0" width=450 height="300"></iframe>
-		</article>
+	<section id="main">		
+		<div id="artist">
+			<!-- <h4>brand</h4> -->
+			<a href = "https://www.dior.com/ko_kr?NaPm=ct%3Dlbhwwh8j%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3De86c3335c559506b602c689d7fecd7164bc672c5">
+				<img src="./images/지수.jpeg" alt="디올 공식홈페이지로 이동" width="150" height="150">
+			</a>
+			<a href = "https://www.chanel.com/kr/">
+				<img src="./images/제니.jpeg" alt="샤넬 공식홈페이지로 이동" width="150" height="150"><br>
+			</a>
+			<a href = "https://www.gucci.com/kr/ko/">
+				<img src="./images/아이유.jpeg" alt="구찌 공식홈페이지로 이동" width="150" height="150">
+			</a>
+			<a href = "https://www.ysl.com/ko-kr">
+				<img src="./images/로제.jpeg" alt="생로랑 공식홈페이지로 이동" width="150" height="150">
+			</a>
+		</div>
 	</section>
+
 	<aside id="right">
 		<div id="login">
 			<!-- <h4>Login</h4> -->
 			<from action="loginService" method="POST">
-			 아이디
-			 <input type="text"><br>
-			 비밀번호
-			 <input type="text"><br>
-			 <input type="submit" value="회원가입">
-			 <input type="submit" value="로그인"><br>
-			 
+				<!--
+				아이디
+				<input type="text"><br>
+				비밀번호
+				<input type="text"><br>
+				-->
 
+				<img src="./images/사용자아이콘.png" width="15"height="15">
+				<input type="text" id="id" placeholder="아이디"><br>
+
+				<img src="./images/열쇠아이콘.png" width="15"height="15">
+				<input type="password" id="password" placeholder="비밀번호"><br>
+				<div id="buttons">
+					<input type="submit" value="회원가입">
+					<input type="submit" value="로그인"><br>
+				</div>
+			</from>
 		</div>
 
 		<div id="brand">
@@ -61,6 +83,6 @@
 			</a>
 		</div>
 	</aside>
-	<footer></footer>
+	<!-- <footer>좋아하는 연예인의 착용 제품을 찾아주는 쇼핑 플랫폼</footer> -->
 </body>
 </html>

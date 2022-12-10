@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>모지모지 메인페이지</title>
+	<!-- 외부 스타일시트 적용 -->
+	<link rel="stylesheet" href="./메인페이지.css">
+</head>
+<body>
+	<header>
+		<h1>
+			<img src="./images/ㅁㅈ.jpg" alt="모지모지" width="50"height="50">
+			<a href = "index.html">ㅁㅈㅁㅈ</a>
+		</h1>
+	</header>
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a>
+			<li><a href="index.html">Buy</a>
+			<li><a href="index.html">Community</a>
+		</ul>
+	</nav>
+	<aside id="left">
+		<h4>Category</h4><br>
+		<ul>
+			<li><a href="./gucci.html" target="iframe1">구찌</a></li>
+			<li><a href="./louisvuitton.html" target="iframe1">루이비통</a></li>
+			<li><a href="./dior.html" target="iframe1">디올</a></li>
+			<li><a href="./chanel.html" target="iframe1">샤넬</a></li>
+			<li><a href="./ysl.html" target="iframe1">생로랑</a></li>
+			<li><a href="./celine.html" target="iframe1">셀린느</a></li>
+		</ul>
+	</aside>
+	<section id="main">
+		<article>
+			<iframe name="ifram1" src="gucci.html" frameborder="0" width=450 height="300"></iframe>
+		</article>
+	</section>
+	<aside id="right">
+		<div id="login">
+			<h4>Login</h4>
+			<from action="loginService" method="POST">
+			 아이디
+			 <input type="text"><br>
+			 비밀번호
+			 <input type="text"><br>
+			 <input type="submit" value="로그인">
+			 <input type="reset" value="초기화"><br>
+			 <a href="./register.html" target="_blank">회원가입</a>
+
+		</div>
+	</aside>
+	<footer></footer>
+</body>
+</html>

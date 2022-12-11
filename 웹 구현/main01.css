@@ -37,6 +37,11 @@ nav ul li a{
 
 nav ul li a:hover{text-decoration: underline;}
 
+#container{
+	display: flex;
+	flex-wrap: wrap;
+}
+
 /*왼쪽사이드메뉴*/
 aside#left{
 	float: left;
@@ -69,23 +74,26 @@ aside#left ul li:hover{
 }
 
 aside#main{
-	float: left;
+	float:left;
+	
 }
 /*가운데 본문 영역 & 이미지 가운데정렬*/
 section#main{
-	float: left;
+	float:left;
 	position: absolute;
 	z-index: 99;
-	top: 50%;
+	top: 33.3%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	max-width: 100%;
+	height: auto;
 }
 
 /*오른쪽사이드메뉴*/
 aside#right{
 	float: right;
 	padding: 10px;
-	width:12em;
+	width:12em;;
 }
 
 aside#right #login input{

@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>모지모지 가방 페이지</title>
+<title>모지모지 메인페이지</title>
 	<!-- 외부 스타일시트 적용 -->
-	<link rel="stylesheet" href="category01.css">
+	<link rel="stylesheet" href="main01.css">
 </head>
 <body>
 	<header>
@@ -30,28 +30,26 @@
 
 	</aside>
 	<section id="main">		
-		<div id="bag">
-			<h4 style="text-align: center;">BAG</h4><br>
-            <!-- <h4 style="text-align: center;">Bag</h4><br> -->
-            <a href = "https://www.ysl.com/ko-kr/%EC%82%AC%EC%B2%BC-%EB%98%90%EB%8A%94-%EB%B2%84%ED%82%B7%EB%B0%B1/%EB%B0%95%EC%8A%A4-%EC%83%9D-%EB%A1%9C%EB%9E%91-%EA%B0%80%EC%A3%BD-%EC%86%8C%EC%9E%AC%EC%9D%98-solferino-%EB%AF%B8%EB%94%94%EC%97%84-%EC%82%AC%EC%B2%BC-%EB%B0%B1-6343050SX0W1000.html">
-                <img src="./images/로제생로랑솔페리노사첼백.png" alt="해당 제품 파는 곳으로 이동" style= "max-width: 45%;" height="200">
-            </a>
-            <a href = "https://www.dior.com/ko_kr/fashion/products/M0565ONGE_M900-lady-dior-%EB%AF%B8%EB%94%94%EC%97%84-%EB%B0%B1-%EB%B8%94%EB%9E%99-%EA%B9%8C%EB%82%98%EC%A5%AC-%EC%96%91%EA%B0%80%EC%A3%BD">
-                <img src="./images/지수디올레이디디올미디엄백.png" alt="해당 제품 파는 곳으로 이동" style= "max-width: 45%;" height="200">
-            </a>
-            <a href = "https://www.gucci.com/kr/ko/pr/women/handbags/top-handle-bags-for-women/gucci-horsebit-1955-small-top-handle-bag-p-6212200YK0G1000">
-                <img src="./images/아이유구찌홀스빗1955스몰탑핸들백.png" alt="해당 제품 파는 곳으로 이동" style= "max-width: 45%;" height="200">
-            </a>
-            <a href = "https://www.chanel.com/kr/fashion/p/AS1160B0958594305/chanel-19-handbag-glossy-calfskin-gold-tone-silver-tone-ruthenium-finish-metal/">
-                <img src="./images/제니샤넬19백미디엄.jpg" alt="해당 제품 파는 곳으로 이동" style= "max-width: 45%;" height="200">
-            </a>
+		<div id="information">
+			<!-- <h4>Login</h4> -->
+			<form action="information.php" method="POST">
+				<img src="./images/사용자아이콘.png" width="200"height="200"><br>
+				<input type="text" name="id" placeholder="아이디"><br>
+                <input type="text" name="name" placeholder="이름"><br>
+                <input type="pasword" name="password" placeholder="비밀번호"><br>
+                <input type="password" name="passwordcheck" placeholder="비밀번호확인"><br>
+                <input type="text" name="nickname" placeholder="닉네임"><br>
 
-        </div>
-		
+				<div id="buttons">
+					<input type="submit" value="회원탈퇴">
+					<input type="submit" value="수정"><br>
+				</div>
+			</form>
+		</div>
 	</section>
 
 	<aside id="right">
-		<div id="login">
+		<div id="loginService">
 			<!-- <h4>Login</h4> -->
 			<form action="login.php" method="POST">
 				<img src="./images/사용자아이콘.png" width="15"height="15">

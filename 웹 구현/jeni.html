@@ -2,9 +2,9 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>모지모지 아티스트페이지</title>
+<title>모지모지 제니_샤넬 페이지</title>
 	<!-- 외부 스타일시트 적용 -->
-	<link rel="stylesheet" href="artisit01.css">
+	<link rel="stylesheet" href="jeni.css">
 </head>
 <body>
 	<header>
@@ -22,24 +22,18 @@
 	</nav>
 	<aside id="left">
 		<h4>CATEGORY</h4><br>
-		<ul>
-			<li><a href="category01.html">Bag</a></li>
-		</ul>
+		<div id="category">
+			<ul>
+				<li><a href="category01.html">Bag</a></li>
+			</ul>
+		</div>
+
 	</aside>
 	<section id="main">		
-		<div id="artist">
-			<h4 style="text-align: center;">TOP RANK</h4><br>
-			<a href = "https://www.dior.com/ko_kr?NaPm=ct%3Dlbhwwh8j%7Cci%3Dcheckout%7Ctr%3Dds%7Ctrx%3D%7Chk%3De86c3335c559506b602c689d7fecd7164bc672c5">
-				<img src="./images/지수.jpeg" alt="디올 공식홈페이지로 이동" width="150" height="150">
-			</a>
-			<a href = "https://www.chanel.com/kr/">
-				<img src="./images/제니.jpeg" alt="샤넬 공식홈페이지로 이동" width="150" height="150"><br>
-			</a>
-			<a href = "https://www.gucci.com/kr/ko/">
-				<img src="./images/아이유.jpeg" alt="구찌 공식홈페이지로 이동" width="150" height="150">
-			</a>
-			<a href = "https://www.ysl.com/ko-kr">
-				<img src="./images/로제.jpeg" alt="생로랑 공식홈페이지로 이동" width="150" height="150">
+		<div id="jeni_CHANEL">
+			<h2 style="text-align: center;"><img src="./images/제니.jpeg" width="45" height="45"; style="vertical-align:text-top">블랙핑크_제니_CHANEL</h2><br>
+                <a href = "https://www.chanel.com/kr/fashion/p/AS1160B0958594305/chanel-19-handbag-glossy-calfskin-gold-tone-silver-tone-ruthenium-finish-metal/">
+                <img src="./images/제니샤넬19백미디엄.jpg" alt="해당 제품 정보 페이지로 이동" style= "max-width: 45%;" height="200">
 			</a>
 		</div>
 	</section>
@@ -47,24 +41,17 @@
 	<aside id="right">
 		<div id="login">
 			<!-- <h4>Login</h4> -->
-			<from action="loginService" method="POST">
-				<!--
-				아이디
-				<input type="text"><br>
-				비밀번호
-				<input type="text"><br>
-				-->
-
+			<form action="login.php" method="POST">
 				<img src="./images/사용자아이콘.png" width="15"height="15">
-				<input type="text" id="id" placeholder="아이디"><br>
+				<input type="text" name="id" placeholder="아이디"><br>
 
 				<img src="./images/열쇠아이콘.png" width="15"height="15">
-				<input type="password" id="password" placeholder="비밀번호"><br>
+				<input type="password" name="password" placeholder="비밀번호"><br>
 				<div id="buttons">
 					<input type="submit" value="회원가입">
 					<input type="submit" value="로그인"><br>
 				</div>
-			</from>
+			</form>
 		</div>
 
 		<div id="brand">

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>모지모지 메인페이지</title>
+<title>모지모지 아티스트페이지</title>
 	<!-- 외부 스타일시트 적용 -->
 	<link rel="stylesheet" href="main01.css">
 </head>
@@ -20,53 +20,42 @@
 			<li><a href="community.html">COMMUNITY</a>
 		</ul>
 	</nav>
-
-
 	<aside id="left">
 		<h4>CATEGORY</h4><br>
-		<div id="category">
-			<ul>
-				<li><a href="category01.html">Bag</a></li>
-			</ul>
-		</div>
-
+		<ul>
+			<li><a href="category01.html">Bag</a></li>
+		</ul>
 	</aside>
-	
-
-	
 	<section id="main">		
 		<div id="artist">
 			<h4 style="text-align: center;">TOP RANK</h4><br>
 			<a href = "jisu.html">
-				<img src="./images/지수.jpeg" alt="디올 공식홈페이지로 이동" style= "max-width: 45%;" height="200">
+                <img src="./images/지수.jpeg" alt="디올 공식홈페이지로 이동" width="150" height="150">
 			</a>
-			<a href = "jeni.html">
-				<img src="./images/제니.jpeg" alt="샤넬 공식홈페이지로 이동" style= "max-width: 45%;" height="200"><br>
+			<a href = "https://www.chanel.com/kr/">
+				<img src="./images/제니.jpeg" alt="샤넬 공식홈페이지로 이동" width="150" height="150"><br>
 			</a>
-			<a href = "iu.html">
-				<img src="./images/아이유.jpeg" alt="구찌 공식홈페이지로 이동" style= "max-width: 45%;" height="200">
+			<a href = "https://www.gucci.com/kr/ko/">
+				<img src="./images/아이유.jpeg" alt="구찌 공식홈페이지로 이동" width="150" height="150">
 			</a>
-			<a href = "rose.html">
-				<img src="./images/로제.jpeg" alt="생로랑 공식홈페이지로 이동" style= "max-width: 45%;" height="200">
+			<a href = "https://www.ysl.com/ko-kr">
+				<img src="./images/로제.jpeg" alt="생로랑 공식홈페이지로 이동" width="150" height="150">
 			</a>
 		</div>
 	</section>
 
-
 	<aside id="right">
 		<div id="login">
 			<!-- <h4>Login</h4> -->
-			<form action="login.php" method="POST">
+			<from action="loginService" method="POST">
 				<img src="./images/사용자아이콘.png" width="15"height="15">
 				<input type="text" name="id" placeholder="아이디"><br>
 
 				<img src="./images/열쇠아이콘.png" width="15"height="15">
 				<input type="password" name="password" placeholder="비밀번호"><br>
-				<div id="buttons">
-					<input type="submit" value="회원가입">
-					<input type="submit" value="로그인"><br>
-				</div>
-			</form>
+			    <a href="logout.html">로그아웃</a>
+				<a href="mypage01.html">마이페이지</a>
+			</from>
 		</div>
 
 		<div id="brand">
@@ -85,7 +74,6 @@
 			</a>
 		</div>
 	</aside>
-
 	<!-- <footer>좋아하는 연예인의 착용 제품을 찾아주는 쇼핑 플랫폼</footer> -->
 </body>
 </html>

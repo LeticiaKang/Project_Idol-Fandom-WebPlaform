@@ -82,7 +82,7 @@ section#main{
 	float:left;
 	position: absolute;
 	z-index: 99;
-	top: 33.3%;
+	top: 65%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	max-width: 100%;

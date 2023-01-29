@@ -90,66 +90,48 @@
     <script src="/happyvirus/myapp/templates/assets/js/common.js"></script>
     <script>
         jQuery(function() {
-            // 변수(상수) 선언
             const Form = $('#frmfind_pw');
-            const checkAll = $('#check_all');
-            const checkItems = $('input[name^=agree_]');
-            const totalCheckItems = checkItems.length;
-
-            // 약관 전체동의 체크박스
-            checkAll.on('click', function() {
-                if ( $(this).is(':checked') ) {
-                    checkItems.prop('checked', true);
-                } else {
-                    checkItems.prop('checked', false);
-                }
-            });
-
-            // 각 약관 체크시 전체동의 체크박스 체크/해제
-            checkItems.on('click', function() {
-                let checkedCount = $('input[name^=agree_]:checked').length;
-
-                if ( checkedCount == totalCheckItems ) {
-                    checkAll.prop('checked', true);
-                } else {
-                    checkAll.prop('checked', false);
-                }
-            });
-
             Form.validate({
                 rules: {
-                    'user_name': {
+                    'user_name':{
                         required: true,
-                        minlength: 2
+                        minlength: 2,
+                        equalTo: '#user_name'
                     },
                     'user_id': {
                         required: true,
-                        minlength: 3
+                        minlength: 3,
+                        equalTo: '#user_id'
                     },
-                    'user_email': {
+                    'user_email':{
                         required: true,
-                        email: true
+                        email: true,
+                        equalTo: '#user_email'
                     }
                 },
                 messages: {
                     'user_name': {
                         required: '이름을 입력해 주세요.',
-                        minlength: '이름은 최소 2글자 이상 입력해 주세요.'
+                        minlength: '이름은 최소 2글자 이상 입력해 주세요.',
+                        equalTo: '이름이 일치하지 않습니다.'
                     },
                     'user_id': {
                         required: '아이디를 입력해 주세요.',
-                        minlength: '아이디는 최소 3글자 이상 입력해 주세요.'
+                        minlength: '아이디는 최소 3글자 이상 입력해 주세요.',
+                        equalTo: '아이디가 일치하지 않습니다.'
                     },
                     'user_email': {
                         required: '이메일을 입력해 주세요.',
-                        email: '이메일 주소를 올바르게 입력해 주세요.'
+                        email: '이메일 주소를 올바르게 입력해 주세요.',
+                        equalTo: '이메일이 일치하지 않습니다.'
                     }
                 },
                 errorPlacement: function(error, element) {
                     error.appendTo( $('.error-container') );
                 },
                 submitHandler: function(form) {
-                    alert('비밀번호 찾기 폼 전송');
+                    <!-- alert('비밀번호 찾기 성공'); -->
+                    
                 }
             });
         });

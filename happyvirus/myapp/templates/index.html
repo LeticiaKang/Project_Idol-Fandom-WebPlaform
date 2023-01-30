@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -7,13 +9,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HappyVirus</title>
     
-    {% load static %}
-    <link rel="preconnect" href='https://fonts.googleapis.com'>
-    <link rel="preconnect" href='https://fonts.gstatic.com' crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static '/css/vendor/bootstrap-icons.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/vendor/aos.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
@@ -49,9 +50,10 @@
                             </li>
                             <li><a href="./service.html">검색</a></li>
                             <li><a href="./contact.html">문의하기</a></li>
+
                             <li class="sidemenu" lang="en">
-                                <a class="darken" href="./login.html">{% comment %} <a> 로그인</a> {% endcomment %}
-                                <a href="{% url 'join' %}">회원가입</a>
+                                <a class="darken" href="./login.html">로그인</a> 
+                                <a href="./join.html" >회원가입</a>
                             </li>
                         </ul>
                     </nav>

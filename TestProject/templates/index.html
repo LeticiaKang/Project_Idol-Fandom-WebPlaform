@@ -1,0 +1,227 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MOJIMOJI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/vendor/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/css/vendor/normalize.css">
+    <link rel="stylesheet" href="/assets/css/vendor/aos.min.css">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="/assets/css/ui.css">
+</head>
+
+<body class="main">
+    <!-- #header -->
+    <header id="header">
+        <div class="container-xl h-100">
+            <div class="header-container d-flex h-100 justify-content-between align-items-center">
+                <!-- .logo -->
+                <h1 class="logo">
+                    <a lang="en" href="/">mojimoji</a>
+                </h1>
+                <!-- .logo -->
+
+                <!-- .navbar-group -->
+                <div class="navbar-group">
+                    <!-- .gnb -->
+                    <nav class="gnb">
+                        <ul role="navigation" lang="en" aria-label="상단 메뉴">
+                            <li><a class="active" href="/">모지모지</a></li>
+                            <li><a href="/pages/service.html">서비스 이용하기</a></li>
+                            <li><a href="/pages/contact.html">문의하기</a></li>
+                            <li class="sidemenu" lang="en">
+                                <a class="darken" href="/pages/login.html">로그인</a>
+                                {% comment %} <a> 로그인</a> {% endcomment %}
+                                <a href="{% url 'join' %}" >회원가입</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- .gnb -->
+                </div>
+                <!-- .navbar-group -->
+
+                <!-- .hamburger-button -->
+                <button type="button" class="hamburger-button">
+                    <span class="sr-only">메뉴 열기</span>
+                    <span class="line"></span>
+                </button>
+                <!-- .hamburger-button -->
+            </div>
+        </div>
+    </header>
+    <!-- #header -->
+
+    <!-- #container -->
+    <main id="container" role="main">
+        <!-- .hero -->
+        <section class="hero bg-cover">
+            <!-- .hero-text -->
+            <div class="hero-text d-flex h-100">
+                <div class="container-xl">
+                    <h1 lang="en" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">BLACKPINK X MOJIMOJI <br><strong>HAPPYVIRUS</strong></h1>
+                    
+                    <div class="sns-link" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
+                        <a href="https://www.instagram.com/blackpinkofficial/" target="_blank" title="블랙핑크 인스타그램 [새창]"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/c/blackpinkofficial" target="_blank" title="블랙핑크 유튜브 [새창]"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.facebook.com/BLACKPINKOFFICIAL" target="_blank" title="블랙핑크 페이스북 [새창]"><i class="bi bi-facebook"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!-- .hero-text -->
+        </section>
+        <!-- .hero -->
+
+        <!-- .upload -->
+        <section class="section upload">
+            <div class="container-xl">
+                <h2 data-aos="fade-up" data-aos-duration="600">사진만 첨부하면 알아서 뚝딱. <br>그저 업로드만 하세요, <br class="d-sm-none">추천은 우리가 해 드릴게요. <br>똑똑하게 원하는 아이템을 찾아드리는 모지모지, <br>지금 바로 이용해 보세요!</h2>
+
+                <div class="service-button" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                    <a href="/pages/service.html" class="button button--primary px-4">서비스 이용해보기</a>
+                </div>
+            </div>
+
+            <!-- .flow-img-list -->
+            <ul class="flow-img-list">
+                <li><img src="/assets/images/main/flow_img01.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img02.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img03.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img04.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img05.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img06.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img01.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img02.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img03.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img04.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img05.jpg" alt=""></li>
+                <li><img src="/assets/images/main/flow_img06.jpg" alt=""></li>
+            </ul>
+            <!-- .flow-img-list -->
+        </section>
+        <!-- .upload -->
+
+        <!-- .about -->
+        <section class="section about">
+            <div class="container-xl">
+                <!-- .section-header -->
+                <div class="section-header" data-aos="fade-up" data-aos-duration="600">
+                    <h2 class="mb-4">여러분이 원하는 스타일, <br>사진으로 쉽고 간편하게 <br>찾아 드려요</h2>
+                    <p>모지모지는 패션과 K-POP산업에 숙련된 인재들과 함께하며, <br class="d-none d-sm-block">언제든지 저희 고객들에게 최상의 서비스를 제공합니다. <br>저희의 패션 매칭 서비스를 이용해 보시고, <br>사랑받는 셀럽들과 자신만의 스타일을 찾아보세요!</p>
+                </div>
+                <!-- .section-header -->
+
+                <!-- .row -->
+                <div class="row mx-lg-n5">
+                    <div class="col-sm-6 col-item px-lg-5" data-aos="fade-up" data-aos-duration="600">
+                        <div class="icon">
+                            <ion-icon name="cloud-upload"></ion-icon>
+                        </div>
+                        <h4>간단하게 사진을 첨부하세요</h4>
+                        <p>유명한 셀럽이 입은 제품이 궁금하신가요? <br>궁금한 의상이 포함되어 있는 사진을 첨부해 주세요.</p>
+                    </div>
+
+                    <div class="col-sm-6 col-item px-lg-5" data-aos="fade-up" data-aos-duration="600">
+                        <div class="icon">
+                            <ion-icon name="color-wand"></ion-icon>
+                        </div>
+                        <h4>모지모지가 분석해 드려요</h4>
+                        <p>모지모지만의 신속하고 정확한 AI기술과 딥러닝을 통해 쌓인 <br class="d-none d-sm-block">빅데이터를 기반으로 정확하게 분석해 드려요.</p>
+                    </div>
+                    
+                    <div class="col-sm-6 col-item px-lg-5" data-aos="fade-up" data-aos-duration="600">
+                        <div class="icon">
+                            <ion-icon name="storefront"></ion-icon>
+                        </div>
+                        <h4>분석이 끝나면 링크를 제공해 드려요</h4>
+                        <p>똑똑하고 정확한 모지모지 AI가 분석을 마치면, <br class="d-none d-sm-block">여러분께 해당 제품의 구매 링크를 전달해 드려요.</p>
+                    </div>
+
+                    <div class="col-sm-6 col-item px-lg-5" data-aos="fade-up" data-aos-duration="600">
+                        <div class="icon">
+                            <ion-icon name="pricetags"></ion-icon>
+                        </div>
+                        <h4>의상 뿐이 아닌 다른 제품도 찾아드려요</h4>
+                        <p>모지모지 서비스는 의상 뿐만 아니라 가방, 팔찌, 목걸이 등 <br class="d-none d-sm-block">패션과 관련된 모든 아이템을 찾아드려요.</p>
+                    </div>
+                </div>
+                <!-- .row -->
+            </div>
+        </section>
+        <!-- .about -->
+
+        <!-- .detail -->
+        <section class="section detail">
+            <div class="container-xl">
+                <!-- .row -->
+                <div class="row mx-lg-n4">
+                    <div class="col-sm-4 col-item px-lg-4" data-aos="fade-up" data-aos-duration="600">
+                        <h4>지금 바로 이용해 보기</h4>
+                        <p>똑똑하고 정확한 모지모지 서비스, <br>지금 바로 이용해 보세요! <br>물론, 무료입니다!</p>
+                        <a href="/pages/service.html" class="button button--secondary button--sm">서비스 이용하기</a>
+                    </div>
+
+                    <div class="col-sm-4 col-item px-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
+                        <h4>오류 제보하기</h4>
+                        <p>모지모지는 이용해주시는 여러분과 <br>함께 성장합니다. 오류를 제보해 주시면 <br>서비스 개선에 큰 도움이 돼요.</p>
+                        <a href="/pages/contact.html" class="button button--secondary button--sm">자세히 알아보기</a>
+                    </div>
+
+                    <div class="col-sm-4 col-item px-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
+                        <h4>서비스 문의하기</h4>
+                        <p>모지모지에 궁금한 사항이 있으신가요? <br>문의를 남겨 주시면 담당자가 <br>확인 후 답변을 드려요.</p>
+                        <a href="/pages/contact.html" class="button button--secondary button--sm">서비스 문의하기</a>
+                    </div>
+                </div>
+                <!-- .row -->
+            </div>
+        </section>
+        <!-- .detail -->
+    </main>
+    <!-- #container -->
+
+    <!-- #footer -->
+    <footer id="footer">
+        <div class="container-xl">
+            <!-- .footer-menu -->
+            <ul class="footer-menu">
+                <li><a href="#none">이용약관</a></li>
+                <li><a class="bold-link" href="#none">개인정보처리방침</a></li>
+            </ul>
+            <!-- .footer-menu -->
+
+            <!-- .cs-info -->
+            <p class="cs-info"><strong>고객상담 1588-0000</strong><span>(평일 오전 9시 ~ 오후 6시)</span></p>
+            <!-- .cs-info -->
+
+            <!-- .footer-info -->
+            <address class="footer-info">대표 김윤호 <em class="divider d-none d-sm-inline-block">|</em> <br class="d-sm-none">서울특별시 서초구 동작대로 132 안석빌딩 9층 <em class="divider d-none d-sm-inline-block">|</em> <br class="d-sm-none">대표전화 1588-0000 <br>cs@mojimoji.com</address>
+            <!-- .footer-info -->
+
+            <!-- .footer-copyright -->
+            <p class="footer-copyright">HappyVirus All Rights reserved.</p>
+            <!-- .footer-copyright -->
+        </div>
+    </footer>
+    <!-- #footer -->
+
+    <script src="/assets/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/vendor/aos.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/assets/js/common.js"></script>
+
+</body>
+</html>

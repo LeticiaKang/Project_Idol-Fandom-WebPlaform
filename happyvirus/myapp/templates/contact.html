@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -9,15 +10,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/bootstrap-icons.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/normalize.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/aos.min.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/fonts.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/reset.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/layout.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/sub.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/ui.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/aos.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sub.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ui.css' %}">
 </head>
 <body>
     <!-- #header -->
@@ -26,7 +27,7 @@
             <div class="header-container d-flex h-100 justify-content-between align-items-center">
                 <!-- .logo -->
                 <h1 class="logo">
-                    <a lang="en" href="/happyvirus/myapp/templates/index.html">바이팬</a>
+                    <a lang="en" href="{% url 'index' %}">바이팬</a>
                 </h1>
                 <!-- .logo -->
 
@@ -37,17 +38,17 @@
                         <ul role="navigation" lang="en" aria-label="상단 메뉴">
                             <li class="nav-item droopdown"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">마이페이지</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/mypage.html">내 정보</a>
-                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/upload.html">사진 업로드</a>
-                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/collection.html">컬렉션</a>
-                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/sales_list.html">업로드 현황</a>
+                                    <a class="dropdown-item" href="#none">내 정보</a>
+                                    <a class="dropdown-item" href="#none">사진 업로드</a>
+                                    <a class="dropdown-item" href="#none">컬렉션</a>
+                                    <a class="dropdown-item" href="#none">업로드 현황</a>
                                 </div>
                             </li>
-                            <li><a href="/happyvirus/myapp/templates/pages/service.html">검색</a></li>
-                            <li><a href="/happyvirus/myapp/templates/pages/contact.html">문의하기</a></li>
+                            <li><a href="{% url 'service' %}">검색</a></li>
+                            <li><a href="{% url 'contact' %}">문의하기</a></li>
                             <li class="sidemenu" lang="en">
-                                <a class="darken" href="/happyvirus/myapp/templates/pages/login.html">로그인</a>
-                                <a href="/happyvirus/myapp/templates/pages/join.html">회원가입</a>
+                                <a class="darken" href="{% url 'login' %}">로그인</a>
+                                <a href="{% url 'join' %}">회원가입</a>
                             </li>
                         </ul>
                     </nav>
@@ -136,12 +137,12 @@
     </footer>
     <!-- #footer -->
 
-    <script src="/happyvirus/myapp/templates/assets/js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="/happyvirus/myapp/templates/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static '/js/vendor/bootstrap.bundle.min.js' %}"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
-    <script src="/happyvirus/myapp/templates/assets/js/vendor/aos.min.js"></script>
-    <script src="/happyvirus/myapp/templates/assets/js/common.js"></script>
-    <script src="/happyvirus/myapp/templates/assets/js/sub.js"></script>
+    <script src="{% static '/js/vendor/aos.min.js' %}"></script>
+    <script src="{% static '/js/common.js' %}"></script>
+    <script src="{% static '/js/sub.js' %}"></script>
 </body>
 </html>

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -9,13 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/normalize.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/fonts.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/reset.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/layout.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/sub.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/ui.css">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sub.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ui.css' %}">
 </head>
 <body>
     <!-- #container -->
@@ -58,7 +59,7 @@
                                     </div>
                                 </div>
                                 <div class="col-auto">
-                                    <a href="/happyvirus/myapp/templates/pages/find_pw.html" class="find-password">비밀번호 찾기</a>
+                                    <a href="#none" class="find-password">비밀번호 찾기</a>
                                 </div>
                             </div>
                             <!-- .row -->
@@ -73,7 +74,7 @@
 
                         <!-- .form-group -->
                         <div class="form-group">
-                            <a href="/happyvirus/myapp/templates/pages/join.html" class="button button--grey w-100">회원가입</a>
+                            <a href="{% url 'join' %}" class="button button--grey w-100">회원가입</a>
                         </div>
                         <!-- .form-group -->
 
@@ -83,7 +84,7 @@
 
                         <!-- .home-link -->
                         <div class="home-link pt-4">
-                            <a href="/happyvirus/myapp/templates/index.html">메인으로 돌아가기</a>
+                            <a href="{% url 'index' %}">메인으로 돌아가기</a>
                         </div>
                         <!-- .home-link -->
                     </form>
@@ -95,13 +96,13 @@
         
     </main>
     <!-- #container -->
-
-    <script src="/happyvirus/myapp/templates/assets/js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="/happyvirus/myapp/templates/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    
+    <script  src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>
+    <script  src="{% static '/js/vendor/bootstrap.bundle.min.js' %}"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
-    <script src="/happyvirus/myapp/templates/assets/js/vendor/jquery.validate.min.js"></script>
-    <script src="/happyvirus/myapp/templates/assets/js/common.js"></script>
+    <script  src="{% static '/js/vendor/jquery.validate.min.js' %}"></script>
+    <script  src="{% static '/js/common.js' %}"></script>
     <script>
         jQuery(function() {
             const Form = $('#frmlogin');

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>로그인 | MOJIMOJI</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/css/vendor/normalize.css">
+    <link rel="stylesheet" href="/assets/css/fonts.css">
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="/assets/css/sub.css">
+    <link rel="stylesheet" href="/assets/css/ui.css">
+</head>
+<body>
+    <!-- #container -->
+    <main id="container" role="main">
+        <!-- .member-service -->
+        <section class="member-service">
+            <div class="container-xl">
+                <!-- .form-wrapper -->
+                <div class="form-wrapper">
+                    <form name="frmlogin" id="frmlogin" method="post" autocomplete="off">
+                        <!-- .form-header -->
+                        <div class="form-header">
+                            <h1 class="logo" lang="en">mojimoji</h1>
+                            <h2>나만의 스타일을 찾을 땐, <br>역시 모지모지에서.</h2>
+                        </div>
+                        <!-- .form-header -->
+
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <input type="text" class="form--control" name="user_id" id="user_id" placeholder="아이디">
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group mb-4">
+                            <input type="password" class="form--control" name="user_pw" id="user_pw" placeholder="비밀번호">
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group mb-4">
+                            <!-- .row -->
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+                                    <div class="custom-check-wrapper">
+                                        <label>
+                                            <input type="checkbox" class="custom-check" name="chk_auto_login" id="chk_auto_login">
+                                            <span>자동 로그인</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="#none" class="find-password">비밀번호 찾기</a>
+                                </div>
+                            </div>
+                            <!-- .row -->
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <button type="submit" class="button button--primary w-100">로그인</button>
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <a href="./join.html" class="button button--grey w-100">회원가입</a>
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .error-container -->
+                        <div class="error-container"></div>
+                        <!-- .error-container -->
+
+                        <!-- .home-link -->
+                        <div class="home-link pt-4">
+                            <a href="/">메인으로 돌아가기</a>
+                        </div>
+                        <!-- .home-link -->
+                    </form>
+                </div>
+                <!-- .form-wrapper -->
+            </div>
+        </section>
+        <!-- .member-service -->
+    </main>
+    <!-- #container -->
+
+    <script src="/assets/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+    <script src="/assets/js/vendor/jquery.validate.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script>
+        jQuery(function() {
+            const Form = $('#frmlogin');
+            Form.validate({
+                rules: {
+                    'user_id': {
+                        required: true,
+                        minlength: 3
+                    },
+                    'user_pw': {
+                        required: true,
+                        minlength: 8
+                    }
+                },
+                messages: {
+                    'user_id': {
+                        required: '아이디를 입력해 주세요.',
+                        minlength: '아이디는 최소 3글자 이상 입력해 주세요.'
+                    },
+                    'user_pw': {
+                        required: '비밀번호를 입력해 주세요.',
+                        minlength: '비밀번호는 최소 8글자 이상 입력해 주세요.',
+                    }
+                },
+                errorPlacement: function(error, element) {
+                    error.appendTo( $('.error-container') );
+                },
+                submitHandler: function(form) {
+                    alert('로그인 폼 전송');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

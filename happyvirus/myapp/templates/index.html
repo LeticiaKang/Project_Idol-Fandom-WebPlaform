@@ -6,19 +6,21 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HappyVirus</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">%
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/bootstrap.min.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/bootstrap-icons.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/normalize.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/aos.min.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/fonts.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/reset.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/layout.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/main.css">
-    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/ui.css">
+    
+    {% load static %}
+    <link rel="preconnect" href='https://fonts.googleapis.com'>
+    <link rel="preconnect" href='https://fonts.gstatic.com' crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/aos.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ui.css' %}">
 
 </head>
 <body class="main">
@@ -28,7 +30,7 @@
             <div class="header-container d-flex h-100 justify-content-between align-items-center">
                 <!-- .logo -->
                 <h1 class="logo">
-                    <a lang="en" href="/happyvirus/myapp/templates/index.html">바이팬</a>
+                    <a lang="en" href="/">바이팬</a>
                 </h1>
                 <!-- .logo -->
 
@@ -39,17 +41,17 @@
                         <ul role="navigation" lang="en" aria-label="상단 메뉴">
                             <li class="nav-item droopdown"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">마이페이지</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/mypage.html" >내 정보</a>
-                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/upload.html">사진 업로드</a>
-                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/collection.html">컬렉션</a>
-                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/sales_list.html">업로드 현황</a>
+                                    <a class="dropdown-item" href="./mypage.html">내 정보</a>
+                                    <a class="dropdown-item" href="./upload.html">사진 업로드</a>
+                                    <a class="dropdown-item" href="./collection.html">컬렉션</a>
+                                    <a class="dropdown-item" href="./upload_list.html">업로드 현황</a>
                                 </div>
                             </li>
-                            <li><a href="/happyvirus/myapp/templates/pages/service.html">검색</a></li>
-                            <li><a href="/happyvirus/myapp/templates/pages/contact.html">문의하기</a></li>
+                            <li><a href="./service.html">검색</a></li>
+                            <li><a href="./contact.html">문의하기</a></li>
                             <li class="sidemenu" lang="en">
-                                <a class="darken" href="/happyvirus/myapp/templates/pages/login.html">로그인</a>
-                                <a href="/happyvirus/myapp/templates/pages/join.html">회원가입</a>
+                                <a class="darken" href="./login.html">{% comment %} <a> 로그인</a> {% endcomment %}
+                                <a href="{% url 'join' %}">회원가입</a>
                             </li>
                         </ul>
                     </nav>
@@ -94,24 +96,24 @@
                 <h2 data-aos="fade-up" data-aos-duration="600">사진만 첨부하면 알아서 뚝딱. <br>그저 업로드만 하세요, <br class="d-sm-none">분류는 우리가 해 드릴게요. <br>똑똑하게 스타의 유사한 사진을 제공해드리는 바이팬, <br>지금 바로 이용해 보세요!</h2>
 
                 <div class="service-button" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
-                    <a href="/happyvirus/myapp/templates/pages/service.html" class="button button--primary px-4">서비스 이용해보기</a>
+                    <a href="./service.html" class="button button--primary px-4">서비스 이용해보기</a>
                 </div>
             </div>
 
             <!-- .flow-img-list -->
             <ul class="flow-img-list">
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img01.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img02.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img03.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img04.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img05.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img06.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img01.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img02.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img03.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img04.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img05.jpg" alt=""></li>
-                <li><img src="/happyvirus/myapp/templates/assets/images/main/flow_img06.jpg" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img01.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img02.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img03.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img04.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img05.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img06.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img01.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img02.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img03.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img04.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img05.jpg' %}" alt=""></li>
+                <li><img src="{% static '/images/main/flow_img06.jpg' %}" alt=""></li>
             </ul>
             <!-- .flow-img-list -->
         </section>
@@ -174,19 +176,19 @@
                     <div class="col-sm-4 col-item px-lg-4" data-aos="fade-up" data-aos-duration="600">
                         <h4>지금 바로 이용해 보기</h4>
                         <p>똑똑하고 정확한 바이팬 서비스, <br>지금 바로 이용해 보세요! <br>물론, 무료입니다!</p>
-                        <a href="/happyvirus/myapp/templates/pages/service.html" class="button button--secondary button--sm">서비스 이용하기</a>
+                        <a href="./service.html" class="button button--secondary button--sm">서비스 이용하기</a>
                     </div>
 
                     <div class="col-sm-4 col-item px-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                         <h4>오류 제보하기</h4>
                         <p>바이팬은 이용해주시는 여러분과 <br>함께 성장합니다. 오류를 제보해 주시면 <br>서비스 개선에 큰 도움이 돼요.</p>
-                        <a href="/happyvirus/myapp/templates/pages/contact.html" class="button button--secondary button--sm">자세히 알아보기</a>
+                        <a href="./contact.html" class="button button--secondary button--sm">자세히 알아보기</a>
                     </div>
 
                     <div class="col-sm-4 col-item px-lg-4" data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                         <h4>서비스 문의하기</h4>
                         <p>바이팬에 궁금한 사항이 있으신가요? <br>문의를 남겨 주시면 담당자가 <br>확인 후 답변을 드려요.</p>
-                        <a href="/happyvirus/myapp/templates/pages/contact.html" class="button button--secondary button--sm">서비스 문의하기</a>
+                        <a href="./contact.html" class="button button--secondary button--sm">서비스 문의하기</a>
                     </div>
                 </div>
                 <!-- .row -->
@@ -221,15 +223,12 @@
     </footer>
     <!-- #footer -->
 
-    <script src="/happyvirus/myapp/templates/assets/js/vendor/jquery-3.4.1.min.js"></script>
-    <script src="/happyvirus/myapp/templates/assets/js/vendor/bootstrap.bundle.min.js"></script>
-    <script src="/happyvirus/myapp/templates/assets/js/vendor/aos.min.js"></script>
+    <script src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static '/js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static '/js/vendor/aos.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="/happyvirus/myapp/templates/assets/js/common.js"></script>
-    <script>
-        
-    </script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js' %}"></script>
+    <script src="{% static '/js/common.js' %}"></script>
 
 </body>
 </html>

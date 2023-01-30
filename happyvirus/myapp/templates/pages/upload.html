@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>서비스 이용하기 | HappyVirus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/bootstrap-icons.css">
+    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/normalize.css">
+    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/vendor/aos.min.css">
+    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/fonts.css">
+    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/reset.css">
+    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/layout.css">
+    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/sub.css">
+    <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/ui.css">
+</head>
+<body>
+    <!-- #header -->
+    <header id="header">
+        <div class="container-xl h-100">
+            <div class="header-container d-flex h-100 justify-content-between align-items-center">
+                <!-- .logo -->
+                <h1 class="logo"><a lang="en" href="/happyvirus/myapp/templates/index.html">바이팬</a></h1>
+                <!-- .logo -->
+
+                <!-- .navbar-group -->
+                <div class="navbar-group">
+                    <!-- .gnb -->
+                    <nav class="gnb">
+                        <ul role="navigation" lang="en" aria-label="상단 메뉴">
+                            <li class="nav-item droopdown"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">마이페이지</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/mypage.html">내 정보</a>
+                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/upload.html">사진 업로드</a>
+                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/collection.html">컬렉션</a>
+                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/sales_list.html">업로드 현황</a>
+                                </div>
+                            </li>
+                            <li><a href="/happyvirus/myapp/templates/pages/service.html">검색</a></li>
+                            <li><a href="/happyvirus/myapp/templates/pages/contact.html">문의하기</a></li>
+                            <li class="sidemenu" lang="en">
+                                <a class="darken" href="/happyvirus/myapp/templates/pages/login.html">로그인</a>
+                                <a href="/happyvirus/myapp/templates/pages/index.html">로그아웃</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- .gnb -->
+                </div>
+                <!-- .navbar-group -->
+
+                <!-- .hamburger-button -->
+                <button type="button" class="hamburger-button">
+                    <span class="sr-only">메뉴 열기</span>
+                    <span class="line"></span>
+                </button>
+                <!-- .hamburger-button -->
+            </div>
+        </div>
+    </header>
+    <!-- #header -->
+
+    <!-- #container -->
+    <main id="container" role="main">
+        <!-- .service -->
+        <section class="section service">
+            <div class="container-xl">
+                <form name="frmupload" id="frmupload" method="post" enctype="multipart/form-data">
+                    <!-- .upload-area-wrapper -->
+                    <div class="upload-area-wrapper">
+                        <h3>파일을 업로드해 주세요</h3>
+                        <!-- .draggable-zone -->
+                        <div class="draggable-zone">
+                            <div class="inner-content">
+                                <div class="icon">
+                                    <i class="bi bi-images"></i>
+                                </div>
+                                <h4 class="header">드래그 &amp; 드롭</h4>
+                                <button type="button" class="button button--dark button--attach px-4">사진 첨부하기</button>
+                                <input type="file" name="photo" id="photo" hidden>
+                                <p class="mt-4">지원되는 파일 : JPEG, JPG, PNG</p>
+                            </div>
+                        </div>
+                        <!-- .draggable-zone -->
+                    </div>
+                    <!-- .upload-area-wrapper -->
+
+                    <!-- .info-list -->
+                    <ul class="info-list mt-4">
+                        <li>최대 업로드 가능한 사진 용량은 5MB 입니다.</li>
+                        <li>실제 사진이 아닌 그림 유형 혹은 인식이 불가능한 사진 등은 정확한 결과가 나오지 않아요.</li>
+                    </ul>
+                    <!-- .info-list -->
+
+                    <!-- .submit-button -->
+                    <div class="submit-button">
+                        <button type="submit" class="button button--primary button--lg px-5">저장</button>
+                    </div>
+                    <!-- .submit-button -->
+                </form>
+            </div>
+        </section>
+        <!-- .service -->
+    </main>
+    <!-- #container -->
+
+    <!-- #footer -->
+    <footer id="footer">
+        <div class="container-xl">
+            <!-- .footer-menu -->
+            <ul class="footer-menu">
+                <li><a href="#none">이용약관</a></li>
+                <li><a class="bold-link" href="#none">개인정보처리방침</a></li>
+            </ul>
+            <!-- .footer-menu -->
+
+            <!-- .cs-info -->
+            <p class="cs-info"><strong>고객상담 1588-0000</strong><span>(평일 오전 9시 ~ 오후 6시)</span></p>
+            <!-- .cs-info -->
+
+            <!-- .footer-info -->
+            <address class="footer-info">대표 김윤호 <em class="divider d-none d-sm-inline-block">|</em> <br class="d-sm-none">서울특별시 서초구 동작대로 132 안석빌딩 9층 <em class="divider d-none d-sm-inline-block">|</em> <br class="d-sm-none">대표전화 1588-0000 <br>cs@mojimoji.com</address>
+            <!-- .footer-info -->
+
+            <!-- .footer-copyright -->
+            <p class="footer-copyright">HappyVirus All Rights reserved.</p>
+            <!-- .footer-copyright -->
+        </div>
+    </footer>
+    <!-- #footer -->
+
+    <script src="/happyvirus/myapp/templates/assets/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="/happyvirus/myapp/templates/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+    <script src="/happyvirus/myapp/templates/assets/js/vendor/aos.min.js"></script>
+    <script src="/happyvirus/myapp/templates/assets/js/common.js"></script>
+    <script>
+        const dragArea = document.querySelector('.draggable-zone');
+        const dragText = document.querySelector('.draggable-zone .header');
+        const form = document.querySelector('#frmupload');
+
+        let attachButton = document.querySelector('.button--attach');
+        let attachInput = document.querySelector('#photo');
+
+        let file;
+
+        // 파일 첨부 버튼 이벤트 부여
+        attachButton.onclick = () => {
+            attachInput.click();
+        };
+
+        // 파일 첨부 버튼을 통한 첨부시 이벤트 부여
+        attachInput.addEventListener('change', function() {
+            file = this.files[0];
+            dragArea.classList.add('active');
+            displayFile();
+        });
+
+        // 드래그 영역에 파일을 드래그했을 경우 이벤트 부여
+        dragArea.addEventListener('dragover', (event) => {
+            event.preventDefault();
+            dragText.textContent = '마우스를 놓아 업로드';
+            dragArea.classList.add('active');
+        });
+
+        // 드래그 영역에서 커서가 벗어났을 경우 이벤트 부여
+        dragArea.addEventListener('dragleave', () => {
+            dragText.textContent = '드래그 & 드롭';
+            dragArea.classList.remove('active');
+        });
+
+        // 드래그 영역에 파일이 드랍되었을 경우 이벤트 부여
+        dragArea.addEventListener('drop', (event) => {
+            event.preventDefault();
+
+            file = event.dataTransfer.files[0];
+            displayFile();
+        });
+
+        // 파일 첨부시 첨부 영역에 이미지 표시
+        function displayFile() {
+            let fileType = file.type;
+            let fileSize = file.size * 1024;
+            let validExtensions = ['image/jpeg', 'image/jpg', 'image/png'];
+
+            // 확장자 유효성 검사
+            if ( validExtensions.includes(fileType) ) {
+                if ( checkByteVali(fileSize, 'MB', 5) ) {
+                    alert('5MB 이하의 사진만 첨부가 가능합니다.');
+                    return false;
+                }
+
+                let fileReader = new FileReader();
+                fileReader.onload = () => {
+                    let fileURL = fileReader.result;
+                    let imgTag = `<img src="${fileURL}" alt="">`;
+                    dragArea.innerHTML = imgTag;
+                };
+                fileReader.readAsDataURL(file);
+            } else {
+                alert('이미지 파일을 첨부해 주세요.');
+                dragArea.classList.remove('active');
+            }
+        }
+
+        // 용량 단위 변환 함수
+        const getByteSize = (size) => {
+            const byteUnits = ["KB", "MB", "GB", "TB"];
+
+            for (let i = 0; i < byteUnits.length; i++) {
+                size = Math.floor(size / 1024);
+
+                if (size < 1024) return size.toFixed(1) + byteUnits[i];
+            }
+        };
+
+        // 용량 비교 함수
+        const checkByteVali = (size, byte = "Byte", multiNum = 1) => {
+            const unit = ["Byte", "KB", "MB", "GB", "TB"].indexOf(byte) + 1;
+            const maxSize = Math.pow(1024, unit) * multiNum;
+
+            return !unit || maxSize < size;
+        };
+
+        // 폼 전송시 이벤트 처리 (파일 첨부여부 체크 등)
+        form.addEventListener('submit', (event) => {
+            event.preventDefault();
+
+            if ( !file ) {
+                alert('사진을 첨부해 주세요.');
+            } else {
+                alert('결과 확인 백엔드 연동 필요');
+            }
+        });
+    </script>
+</body>
+</html>

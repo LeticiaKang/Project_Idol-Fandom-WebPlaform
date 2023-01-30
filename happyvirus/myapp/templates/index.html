@@ -20,19 +20,6 @@
     <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/main.css">
     <link rel="stylesheet" href="/happyvirus/myapp/templates/assets/css/ui.css">
 
-    <script>
-    	function service(){
-    		let signIn = "${signIn}";
-    		if (signIn == ""){
-    			alert("서비스 페이지는 로그인 후 사용하실 수 있습니다.");
-    			location.href="${cpath}/login.do";
-    		} else {
-    			location.href="${cpath}/service.do"
-    		}
-    	}
-    </script>
-
-
 </head>
 <body class="main">
     <!-- #header -->
@@ -55,7 +42,7 @@
                                     <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/mypage.html" >내 정보</a>
                                     <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/upload.html">사진 업로드</a>
                                     <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/collection.html">컬렉션</a>
-                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/sales_list.html">판매내역</a>
+                                    <a class="dropdown-item" href="/happyvirus/myapp/templates/pages/sales_list.html">업로드 현황</a>
                                 </div>
                             </li>
                             <li><a href="/happyvirus/myapp/templates/pages/service.html">검색</a></li>

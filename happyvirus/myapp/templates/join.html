@@ -1,4 +1,4 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -180,8 +180,9 @@
     <script src="/happyvirus/myapp/templates/assets/js/vendor/bootstrap.bundle.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
-    <script src="/happyvirus/myapp/templates/assets/js/vendor/jquery.validate.min.js"></script>
-    <script src="/happyvirus/myapp/templates/assets/js/common.js"></script>
+    <script src="{% '/js/vendor/jquery.validate.min.js' %"}></script>
+    <script src="{% '/js/common.js' %}"></script>
+
     <script>
         jQuery(function() {
             // 변수(상수) 선언

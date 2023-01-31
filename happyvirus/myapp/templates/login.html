@@ -31,7 +31,17 @@
             <div class="container-xl">
                 <!-- .form-wrapper -->
                 <div class="form-wrapper">
-                    <form name="frmlogin" id="frmlogin"  method="post" autocomplete="off">
+                    <form name="frmlogin" id="frmlogin" method="POST" action="{%url 'login' %}" autocomplete="off">
+                        
+                        <!-- post 제출할 때 필수적으로 작용 -->
+                        {% csrf_token %}
+                        <!-- post 제출할 때 필수적으로 작용 -->
+
+                        {% if user.is_authenticated %}
+                        로그인 성공!
+                        {{user.username}}님 환영합니다.
+                        
+                        {% else %}
                         <!-- .form-header -->
                         <div class="form-header">
                             <h1 class="logo" lang="en">바이팬</h1>
@@ -73,7 +83,7 @@
 
                         <!-- .form-group -->
                         <div class="form-group">
-                            <button type="submit" class="button button--primary w-100">로그인</button>
+                            <button type="submit" class="button button--primary w-100">로그인</button> 
                         </div>
                         <!-- .form-group -->
 
@@ -93,6 +103,7 @@
                         </div>
                         <!-- .home-link -->
                     </form>
+                    
                 </div>
                 <!-- .form-wrapper -->
             </div>
@@ -101,7 +112,7 @@
         
     </main>
     <!-- #container -->
-
+    {% endif %}
     <!-- #footer -->
     {% include "footer.html" %}
     <!-- #footer -->
@@ -112,7 +123,7 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
     <script  src="{% static '/js/vendor/jquery.validate.min.js' %}"></script>
     <script  src="{% static '/js/common.js' %}"></script>
-    <script>
+    <!-- <script>
         jQuery(function() {
             const Form = $('#frmlogin');
             Form.validate({
@@ -140,11 +151,11 @@
                     error.appendTo( $('.error-container') );
                 },
                 submitHandler: function(form) {
-                    <!-- alert('로그인 성공'); -->
+                    alert('로그인 성공');
                     
                 }
             });
         });
-    </script>
+    </script>  -->
 </body>
 </html>

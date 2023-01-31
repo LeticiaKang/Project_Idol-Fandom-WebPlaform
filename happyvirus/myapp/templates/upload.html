@@ -49,7 +49,7 @@
 
                             <li class="sidemenu" lang="en">
                                 <a class="darken" href="{% url 'login' %}">로그인</a> 
-                                <a href="{% url 'join' %}" >회원가입</a>
+                                <a href="{% url 'main' %}" >로그아웃</a>
                             </li>
                         </ul>
                     </nav>
@@ -96,13 +96,12 @@
                     <!-- .info-list -->
                     <ul class="info-list mt-4">
                         <li>최대 업로드 가능한 사진 용량은 5MB 입니다.</li>
-                        <li>실제 사진이 아닌 그림 유형 혹은 인식이 불가능한 사진 등은 정확한 결과가 나오지 않아요.</li>
                     </ul>
                     <!-- .info-list -->
 
                     <!-- .submit-button -->
                     <div class="submit-button">
-                        <button type="submit" class="button button--primary button--lg px-5">결과 확인하기</button>
+                        <button type="submit" class="button button--primary button--lg px-5">사진 업로드</button>
                     </div>
                     <!-- .submit-button -->
                 </form>

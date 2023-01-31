@@ -38,10 +38,10 @@
                         <ul role="navigation" lang="en" aria-label="상단 메뉴">
                             <li class="nav-item droopdown"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">마이페이지</a>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#none">내 정보</a>
-                                    <a class="dropdown-item" href="#none">사진 업로드</a>
-                                    <a class="dropdown-item" href="#none">컬렉션</a>
-                                    <a class="dropdown-item" href="#none">업로드 현황</a>
+                                    <a class="dropdown-item" href="{% url 'mypage' %}">내 정보</a>
+                                    <a class="dropdown-item" href="{% url 'upload' %}">사진 업로드</a>
+                                    <a class="dropdown-item" href="{% url 'collection' %}">컬렉션</a>
+                                    <a class="dropdown-item" href="{% url 'upload_list' %}">업로드 현황</a>
                                 </div>
                             </li>
                             <li><a href="{% url 'service' %}">검색</a></li>

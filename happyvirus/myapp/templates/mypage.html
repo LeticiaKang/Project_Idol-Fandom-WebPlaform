@@ -1,0 +1,224 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>회원가입 | HappyVirus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sub.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ui.css' %}">
+</head>
+<body class="main">
+    <!-- #header -->
+    <header id="header">
+        <div class="container-xl h-100">
+            <div class="header-container d-flex h-100 justify-content-between align-items-center">
+                <!-- .logo -->
+                <h1 class="logo">
+                    <a lang="en" href="{% url 'index' %}">바이팬</a>
+                </h1>
+                <!-- .logo -->
+
+                <!-- .navbar-group -->
+                <div class="navbar-group">
+                    <!-- .gnb -->
+                    <nav class="gnb">
+                        <ul role="navigation" lang="en" aria-label="상단 메뉴">
+                            <li class="nav-item droopdown"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">마이페이지</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="{% url 'index' %}">내 정보</a>
+                                    <a class="dropdown-item" href="{% url 'upload' %}">사진 업로드</a>
+                                    <a class="dropdown-item" href="{% url 'collection' %}">컬렉션</a>
+                                    <a class="dropdown-item" href="{% url 'upload_list' %}">업로드 현황</a>
+                                </div>
+                            </li>
+                            <li><a href="{% url 'service' %}">검색</a></li>
+                            <li><a href="{% url 'contact' %}">문의하기</a></li>
+
+                            <li class="sidemenu" lang="en">
+                                <a class="darken" href="{% url 'login' %}">로그인</a> 
+                                <a href="{% url 'join' %}" >회원가입</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- .gnb -->
+                </div>
+                <!-- .navbar-group -->
+
+                <!-- .hamburger-button -->
+                <button type="button" class="hamburger-button">
+                    <span class="sr-only">메뉴 열기</span>
+                    <span class="line"></span>
+                </button>
+                <!-- .hamburger-button -->
+            </div>
+        </div>
+    </header>
+    <!-- #header -->
+
+    <!-- #container -->
+    <main id="container" role="main">
+        <!-- .member-service -->
+        <section class="member-service">
+            <div class="container-xl">
+                <!-- .form-wrapper -->
+                <div class="form-wrapper">
+                    <form name="frmmypage" id="frmmypage" method="post" autocomplete="off">
+                        <!-- .form-header -->
+                        <div class="form-header">
+                            <h1 class="logo" lang="en">바이팬</h1>
+                            <h2>내 정보</h2>
+                        </div>
+                        <!-- .form-header -->
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <input type="text" class="form--control" name="user_name" id="user_name" placeholder="이름">
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <input type="text" class="form--control" name="user_id" id="user_id" placeholder="아이디">
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <input type="password" class="form--control" name="user_pw" id="user_pw" placeholder="비밀번호">
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <input type="password" class="form--control" name="user_pw_confirm" id="user_pw_confirm" placeholder="비밀번호 재확인">
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group mb-4">
+                            <input type="email" class="form--control" name="user_email" id="user_email" placeholder="이메일">
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <button type="submit" class="button button--primary w-100">수정</button>
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .error-container -->
+                        <div class="error-container"></div>
+                        <!-- .error-container -->
+                    </form>
+                </div>
+                <!-- .form-wrapper -->
+            </div>
+        </section>
+        <!-- .member-service -->
+    </main>
+    <!-- #container -->
+
+    <script  src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>
+    <script  src="{% static '/js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+    <script  src="{% static '/js/vendor/jquery.validate.min.js' %}"></script>
+    <script  src="{% static '/js/common.js' %}"></script>
+
+    <script>
+        jQuery(function() {
+            // 변수(상수) 선언
+            const Form = $('#frmmypage');
+            const checkAll = $('#check_all');
+            const checkItems = $('input[name^=agree_]');
+            const totalCheckItems = checkItems.length;
+
+            // 약관 전체동의 체크박스
+            checkAll.on('click', function() {
+                if ( $(this).is(':checked') ) {
+                    checkItems.prop('checked', true);
+                } else {
+                    checkItems.prop('checked', false);
+                }
+            });
+
+            // 각 약관 체크시 전체동의 체크박스 체크/해제
+            checkItems.on('click', function() {
+                let checkedCount = $('input[name^=agree_]:checked').length;
+
+                if ( checkedCount == totalCheckItems ) {
+                    checkAll.prop('checked', true);
+                } else {
+                    checkAll.prop('checked', false);
+                }
+            });
+
+            Form.validate({
+                rules: {
+                    'user_name': {
+                        required: true,
+                        minlength: 2
+                    },
+                    'user_id': {
+                        required: true,
+                        minlength: 3
+                    },
+                    'user_pw': {
+                        required: true,
+                        minlength: 8
+                    },
+                    'user_pw_confirm': {
+                        required: true,
+                        minlength: 8,
+                        equalTo: '#user_pw'
+                    },
+                    'user_email': {
+                        required: true,
+                        email: true
+                    }
+                },
+                messages: {
+                    'user_name': {
+                        required: '이름을 입력해 주세요.',
+                        minlength: '이름은 최소 2글자 이상 입력해 주세요.'
+                    },
+                    'user_id': {
+                        required: '아이디를 입력해 주세요.',
+                        minlength: '아이디는 최소 3글자 이상 입력해 주세요.'
+                    },
+                    'user_pw': {
+                        required: '비밀번호를 입력해 주세요.',
+                        minlength: '비밀번호는 최소 8글자 이상 입력해 주세요.',
+                    },
+                    'user_pw_confirm': {
+                        required: '비밀번호를 다시 한번 입력해 주세요.',
+                        minlength: '비밀번호는 최소 8글자 이상 입력해 주세요.',
+                        equalTo: '비밀번호 값이 일치하지 않습니다.'
+                    },
+                    'user_email': {
+                        required: '이메일을 입력해 주세요.',
+                        email: '이메일 주소를 올바르게 입력해 주세요.'
+                    }
+                },
+                errorPlacement: function(error, element) {
+                    error.appendTo( $('.error-container') );
+                },
+                submitHandler: function(form) {
+                    alert('수정된 정보 전송');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

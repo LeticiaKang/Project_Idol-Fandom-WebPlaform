@@ -139,3 +139,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#로그인시 주로 사용할 모델 선언?
+AUTH_USER_MODEL ='myapp.User'

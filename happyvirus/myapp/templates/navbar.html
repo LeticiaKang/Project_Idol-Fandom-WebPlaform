@@ -26,12 +26,8 @@
                         <li><a href="{% url 'contact' %}">문의하기</a></li>
 
                         <li class="sidemenu" lang="en">
-                            {% if user.is_authenticated %}
-                            <a class="nav-link" href="{% url 'main' %}">{{ user.user_id }} (로그아웃)</a>
-                            {% else %}
-                            <a class="nav-link" href="{% url 'login' %}">로그인</a>
-                            <a class="nav-link" href="{% url 'join' %}" >회원가입</a>
-                            {% endif %}
+                            <a class="darken" href="{% url 'login' %}">로그인</a>
+                            <a href="{% url 'join' %}" >회원가입</a>
                         </li>
                     </ul>
                 </nav>

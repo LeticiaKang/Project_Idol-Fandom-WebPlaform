@@ -21,52 +21,9 @@
     <link rel="stylesheet" href="{% static 'css/ui.css' %}">
 </head>
 <body>
-    <!-- #header -->
-    <header id="header">
-        <div class="container-xl h-100">
-            <div class="header-container d-flex h-100 justify-content-between align-items-center">
-                <!-- .logo -->
-                <h1 class="logo">
-                    <a lang="en" href="{% url 'index' %}">바이팬</a>
-                </h1>
-                <!-- .logo -->
-
-                <!-- .navbar-group -->
-                <div class="navbar-group">
-                    <!-- .gnb -->
-                    <nav class="gnb">
-                        <ul role="navigation" lang="en" aria-label="상단 메뉴">
-                            <li class="nav-item droopdown"><a class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown">마이페이지</a>
-                                <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="{% url 'mypage' %}">내 정보</a>
-                                    <a class="dropdown-item" href="{% url 'upload' %}">사진 업로드</a>
-                                    <a class="dropdown-item" href="{% url 'collection' %}">컬렉션</a>
-                                    <a class="dropdown-item" href="{% url 'upload_list' %}">업로드 현황</a>
-                                </div>
-                            </li>
-                            <li><a href="{% url 'service' %}">검색</a></li>
-                            <li><a href="{% url 'contact' %}">문의하기</a></li>
-
-                            <li class="sidemenu" lang="en">
-                                <a class="darken" href="{% url 'login' %}">로그인</a> 
-                                <a href="{% url 'main' %}" >로그아웃</a>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- .gnb -->
-                </div>
-                <!-- .navbar-group -->
-
-                <!-- .hamburger-button -->
-                <button type="button" class="hamburger-button">
-                    <span class="sr-only">메뉴 열기</span>
-                    <span class="line"></span>
-                </button>
-                <!-- .hamburger-button -->
-            </div>
-        </div>
-    </header>
-    <!-- #header -->
+    <!-- #네비게이션 바 -->
+    {% include "navbar.html" %}
+    <!-- #네비게이션 바 -->
 
     <!-- #container -->
     <main id="container" role="main">
@@ -112,28 +69,7 @@
     <!-- #container -->
 
     <!-- #footer -->
-    <footer id="footer">
-        <div class="container-xl">
-            <!-- .footer-menu -->
-            <ul class="footer-menu">
-                <li><a href="#none">이용약관</a></li>
-                <li><a class="bold-link" href="#none">개인정보처리방침</a></li>
-            </ul>
-            <!-- .footer-menu -->
-
-            <!-- .cs-info -->
-            <p class="cs-info"><strong>고객상담 1588-0000</strong><span>(평일 오전 9시 ~ 오후 6시)</span></p>
-            <!-- .cs-info -->
-
-            <!-- .footer-info -->
-            <address class="footer-info">대표 김윤호 <em class="divider d-none d-sm-inline-block">|</em> <br class="d-sm-none">서울특별시 서초구 동작대로 132 안석빌딩 9층 <em class="divider d-none d-sm-inline-block">|</em> <br class="d-sm-none">대표전화 1588-0000 <br>cs@mojimoji.com</address>
-            <!-- .footer-info -->
-
-            <!-- .footer-copyright -->
-            <p class="footer-copyright">HappyVirus All Rights reserved.</p>
-            <!-- .footer-copyright -->
-        </div>
-    </footer>
+    {% include "footer.html" %}
     <!-- #footer -->
 
     <script src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>
@@ -237,7 +173,7 @@
             if ( !file ) {
                 alert('사진을 첨부해 주세요.');
             } else {
-                alert('결과 확인 백엔드 연동 필요');
+                alert('사진 업로드 백엔드 연동 필요');
             }
         });
     </script>

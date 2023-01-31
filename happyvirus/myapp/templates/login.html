@@ -19,6 +19,10 @@
     <link rel="stylesheet" href="{% static 'css/ui.css' %}">
 </head>
 <body>
+    <!-- #네비게이션 바 -->
+    {% include "navbar.html" %}
+    <!-- #네비게이션 바 -->
+
     <!-- #container -->
     <main id="container" role="main">
         <!-- .member-service -->
@@ -26,7 +30,7 @@
             <div class="container-xl">
                 <!-- .form-wrapper -->
                 <div class="form-wrapper">
-                    <form name="frmlogin" id="frmlogin" method="post" autocomplete="off">
+                    <form name="frmlogin" id="frmlogin"  method="post" autocomplete="off">
                         <!-- .form-header -->
                         <div class="form-header">
                             <h1 class="logo" lang="en">바이팬</h1>
@@ -96,6 +100,10 @@
         
     </main>
     <!-- #container -->
+
+    <!-- #footer -->
+    {% include "footer.html" %}
+    <!-- #footer -->
     
     <script  src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>
     <script  src="{% static '/js/vendor/bootstrap.bundle.min.js' %}"></script>

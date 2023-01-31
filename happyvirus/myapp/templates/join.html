@@ -20,6 +20,10 @@
     <link rel="stylesheet" href="{% static 'css/ui.css' %}">
 </head>
 <body>
+    <!-- #네비게이션 바 -->
+    {% include "navbar.html" %}
+    <!-- #네비게이션 바 -->
+    
     <!-- #container -->
     <main id="container" role="main">
         <!-- .member-service -->
@@ -175,6 +179,10 @@
         </div>
     </div>
     <!-- #privacyTermsModal -->
+
+    <!-- #footer -->
+    {% include "footer.html" %}
+    <!-- #footer -->
 
     <script  src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>
     <script  src="{% static '/js/vendor/bootstrap.bundle.min.js' %}"></script>

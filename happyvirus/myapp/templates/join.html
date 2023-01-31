@@ -31,7 +31,12 @@
             <div class="container-xl">
                 <!-- .form-wrapper -->
                 <div class="form-wrapper">
-                    <form name="frmjoin" id="frmjoin" method="post" autocomplete="off">
+                    <form name="frmjoin" id="frmjoin" method="POST" action="{%url 'join' %}" autocomplete="off">
+
+                        <!-- post 제출할 때 필수적으로 작용 -->
+                        {% csrf_token %}
+                        <!-- post 제출할 때 필수적으로 작용 -->
+
                         <!-- .form-header -->
                         <div class="form-header">
                             <h1 class="logo" lang="en">바이팬</h1>
@@ -112,7 +117,7 @@
 
                         <!-- .form-group -->
                         <div class="form-group">
-                            <button type="submit" class="button button--primary w-100">회원가입</button>
+                            <button type="submit" class="button button--primary w-100"> <a href="{% url 'index' %}">회원가입</a></button>
                         </div>
                         <!-- .form-group -->
 
@@ -191,7 +196,7 @@
     <script  src="{% static '/js/vendor/jquery.validate.min.js' %}"></script>
     <script  src="{% static '/js/common.js' %}"></script>
 
-    <script>
+    <!-- <script>
         jQuery(function() {
             // 변수(상수) 선언
             const Form = $('#frmjoin');
@@ -274,6 +279,6 @@
                 }
             });
         });
-    </script>
+    </script> -->
 </body>
 </html>

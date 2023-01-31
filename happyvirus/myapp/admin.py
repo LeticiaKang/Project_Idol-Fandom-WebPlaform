@@ -5,7 +5,7 @@ from .models import User
 # Register your models here.
 
 #만든 User모델을 등록하기
-admin.site.register
+admin.site.register(User)
 
 #다 만들었으면 유저 생성하기: python manage.py createsuperuser
 #이름: admin 이메일: 그냥 넘어감 pw: 1

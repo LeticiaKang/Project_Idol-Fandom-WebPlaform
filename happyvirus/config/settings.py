@@ -142,3 +142,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 #로그인시 주로 사용할 모델 선언?
 AUTH_USER_MODEL ='myapp.User'
+
+#Templates html 에서도 세션을 이용가능하도록 하는 기능
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.core.context_processors.request',
+)

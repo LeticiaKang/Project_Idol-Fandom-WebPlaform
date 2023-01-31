@@ -1,3 +1,5 @@
+<!-- username과 password 값이 일치하면 -->
+{% if user.is_authenticated %}
 <!-- #header -->
 <header id="header">
     <div class="container-xl h-100">
@@ -26,17 +28,12 @@
                         <li><a href="{% url 'contact' %}">문의하기</a></li>
 
                         <li class="sidemenu" lang="en">
-                            <!-- username과 password 값이 일치하면 -->
-                            {% if user.is_authenticated %}
+
 
                             <a href="{% url 'mypage' %}" >{{user.first_name}}님</a>
                             <a href="{%url 'logout' %}" >로그아웃</a>
 
-                            <!-- username과 password 값이 일치하지 않으면 -->
-                            {% else %}
-                            <a class="darken" href="{% url 'login' %}">로그인</a>
-                            <a href="{% url 'join' %}" >회원가입</a>
-                            {% endif %} 
+
                         </li>
 
                     </ul>
@@ -55,3 +52,47 @@
     </div>
 </header>
 <!-- #header -->
+
+<!-- username과 password 값이 일치하지 않으면 -->
+{% else %}
+<!-- #header -->
+<header id="header">
+    <div class="container-xl h-100">
+        <div class="header-container d-flex h-100 justify-content-between align-items-center">
+            <!-- .logo -->
+            <h1 class="logo">
+                <a lang="en" href="{% url 'index' %}">바이팬</a>
+            </h1>
+            <!-- .logo -->
+
+            <!-- .navbar-group -->
+            <div class="navbar-group">
+                <!-- .gnb -->
+                <nav class="gnb">
+                    <ul role="navigation" lang="en" aria-label="상단 메뉴">
+                       
+                        <li><a href="{% url 'service' %}">검색</a></li>
+                        <li><a href="{% url 'contact' %}">문의하기</a></li>
+
+                        <li class="sidemenu" lang="en">
+                            <a class="darken" href="{% url 'login' %}">로그인</a>
+                            <a href="{% url 'join' %}" >회원가입</a>
+                        </li>
+
+                    </ul>
+                </nav>
+                <!-- .gnb -->
+            </div>
+            <!-- .navbar-group -->
+
+            <!-- .hamburger-button -->
+            <button type="button" class="hamburger-button">
+                <span class="sr-only">메뉴 열기</span>
+                <span class="line"></span>
+            </button>
+            <!-- .hamburger-button -->
+        </div>
+    </div>
+</header>
+<!-- #header -->
+{% endif %} 

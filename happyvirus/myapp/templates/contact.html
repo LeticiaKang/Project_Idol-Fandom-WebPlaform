@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>문의하기 | HappyVirus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/aos.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sub.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ui.css' %}">
+</head>
+<body>
+    <!-- #네비게이션 바 -->
+    {% include "navbar.html" %}
+    <!-- #네비게이션 바 -->
+
+    <!-- #container -->
+    <main id="container" role="main">
+        <!-- .contact -->
+        <section class="section contact">
+            <div class="container-xl">
+                <!-- .section-header -->
+                <div class="section-header text-center">
+                    <h3 class="point-heading">문의하기</h3>
+                    <h2>365일 고객님의 <br>의견을 기다리고 있어요.</h2>
+                </div>
+                <!-- .section-header -->
+
+                <!-- .row -->
+                <div class="row">
+                    <div class="col-md-6 col-card-item">
+                        <div class="contact-card">
+                            <div class="icon">
+                                <i class="bi bi-envelope-check-fill"></i>
+                            </div>
+                            <div class="info">
+                                <h4>cs@happyvirus.com</h4>
+                                <p>메일로 궁금하신 사항을 보내주시면 <br class="d-none d-sm-block">빠르고 정확한 답변을 받아보실 수 있어요.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-card-item">
+                        <div class="contact-card">
+                            <div class="icon">
+                                <ion-icon name="call"></ion-icon>
+                            </div>
+                            <div class="info">
+                                <h4>1588-0000</h4>
+                                <p>공휴일을 제외한 평일 오전 9시부터 <br class="d-none d-sm-block">오후 6시까지 전화 문의도 가능해요.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- .row -->
+            </div>
+        </section>
+        <!-- .contact -->
+    </main>
+    <!-- #container -->
+
+    <!-- #footer -->
+    {% include "footer.html" %}
+    <!-- #footer -->
+
+    <script src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static '/js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+    <script src="{% static '/js/vendor/aos.min.js' %}"></script>
+    <script src="{% static '/js/common.js' %}"></script>
+    <script src="{% static '/js/sub.js' %}"></script>
+</body>
+</html>

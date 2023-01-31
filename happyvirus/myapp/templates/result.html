@@ -1,0 +1,167 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>검색결과 | HappyVirus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/aos.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sub.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ui.css' %}">
+</head>
+<body>
+    <!-- #header -->
+    <header id="header">
+        <div class="container-xl h-100">
+            <div class="header-container d-flex h-100 justify-content-between align-items-center">
+                <!-- .logo -->
+                <h1 class="logo">
+                    <a lang="en" href="/">바이펜</a>
+                </h1>
+                <!-- .logo -->
+
+                <!-- .navbar-group -->
+                <div class="navbar-group">
+                    <!-- .gnb -->
+                    <nav class="gnb">
+                        <ul role="navigation" lang="en" aria-label="상단 메뉴">
+                            <li><a href="/">바이펜</a></li>
+                            <li><a class="active" href="/pages/service.html">서비스 이용하기</a></li>
+                            <li><a href="/pages/contact.html">문의하기</a></li>
+                            <li class="sidemenu" lang="en">
+                                <a class="darken" href="/pages/login.html">로그인</a>
+                                <a href="/pages/join.html">회원가입</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- .gnb -->
+                </div>
+                <!-- .navbar-group -->
+
+                <!-- .hamburger-button -->
+                <button type="button" class="hamburger-button">
+                    <span class="sr-only">메뉴 열기</span>
+                    <span class="line"></span>
+                </button>
+                <!-- .hamburger-button -->
+            </div>
+        </div>
+    </header>
+    <!-- #header -->
+
+    <!-- #container -->
+    <main id="container" role="main">
+        <!-- .result -->
+        <section class="section result">
+            <div class="container-xl">
+                <!-- .search-result -->
+                <div class="search-result">
+                    <!-- .row -->
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4 col-item">
+                            <a href="javascript:alert('상세페이지 준비중입니다.')">
+                                <figure>
+                                    <img src="https://dummyimage.com/480x360" alt="">
+                                </figure>
+                                <h4>이미지 제목명 (미사용시 태그 삭제)</h4>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-item">
+                            <a href="javascript:alert('상세페이지 준비중입니다.')">
+                                <figure>
+                                    <img src="https://dummyimage.com/480x360" alt="">
+                                </figure>
+                                <h4>이미지 제목명 (미사용시 태그 삭제)</h4>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-item">
+                            <a href="javascript:alert('상세페이지 준비중입니다.')">
+                                <figure>
+                                    <img src="https://dummyimage.com/480x360" alt="">
+                                </figure>
+                                <h4>이미지 제목명 (미사용시 태그 삭제)</h4>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-item">
+                            <a href="javascript:alert('상세페이지 준비중입니다.')">
+                                <figure>
+                                    <img src="https://dummyimage.com/480x360" alt="">
+                                </figure>
+                                <h4>이미지 제목명 (미사용시 태그 삭제)</h4>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-item">
+                            <a href="javascript:alert('상세페이지 준비중입니다.')">
+                                <figure>
+                                    <img src="https://dummyimage.com/480x360" alt="">
+                                </figure>
+                                <h4>이미지 제목명 (미사용시 태그 삭제)</h4>
+                            </a>
+                        </div>
+
+                        <div class="col-sm-6 col-md-4 col-item">
+                            <a href="javascript:alert('상세페이지 준비중입니다.')">
+                                <figure>
+                                    <img src="https://dummyimage.com/480x360" alt="">
+                                </figure>
+                                <h4>이미지 제목명 (미사용시 태그 삭제)</h4>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- .row -->
+                </div>
+                <!-- .search-result -->
+            </div>
+        </section>
+        <!-- .result -->
+    </main>
+    <!-- #container -->
+
+    <!-- #footer -->
+    <footer id="footer">
+        <div class="container-xl">
+            <!-- .footer-menu -->
+            <ul class="footer-menu">
+                <li><a href="#none">이용약관</a></li>
+                <li><a class="bold-link" href="#none">개인정보처리방침</a></li>
+            </ul>
+            <!-- .footer-menu -->
+
+            <!-- .cs-info -->
+            <p class="cs-info"><strong>고객상담 1588-0000</strong><span>(평일 오전 9시 ~ 오후 6시)</span></p>
+            <!-- .cs-info -->
+
+            <!-- .footer-info -->
+            <address class="footer-info">대표 김윤호 <em class="divider d-none d-sm-inline-block">|</em> <br class="d-sm-none">서울특별시 서초구 동작대로 132 안석빌딩 9층 <em class="divider d-none d-sm-inline-block">|</em> <br class="d-sm-none">대표전화 1588-0000 <br>cs@mojimoji.com</address>
+            <!-- .footer-info -->
+
+            <!-- .footer-copyright -->
+            <p class="footer-copyright">HappyVirus All Rights reserved.</p>
+            <!-- .footer-copyright -->
+        </div>
+    </footer>
+    <!-- #footer -->
+
+    <script src="/assets/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+    <script src="/assets/js/vendor/aos.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+</body>
+</html>

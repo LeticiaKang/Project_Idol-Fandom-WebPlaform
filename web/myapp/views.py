@@ -99,6 +99,7 @@ def change_pw_view(request):
     if request.method == 'GET':
         return render(request, 'change_pw.html')
 
+
     elif request.method == 'POST':
         user = request.user
 

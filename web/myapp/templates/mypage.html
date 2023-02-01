@@ -55,10 +55,12 @@
                             <table>
                             <tr>
                                 <td>
-                                    <input type="text" class="form-control" name="username" id="username" value="{{user.username}}" readonly="/" style="height: 55px; width: 200px">
+                                    <input type="text" class="form-control" name="username" id="username" value="{{user.username}}" readonly="/" style="margin-right: 30px; height: 55px; width: 200px;">
                                 </td>
+                                
                                 <td>
-                                    <a href="{% url 'change_pw' %}" class="button button--grey w-45" >비밀번호 변경</a>
+
+                                    <a href="{% url 'change_pw' %}" class="button button--primary "style="width:120px; height:55px" >비밀번호 변경</a>
                                 </td>
                             </tr>
                             </table>

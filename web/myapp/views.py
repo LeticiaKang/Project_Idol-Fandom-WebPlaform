@@ -2,6 +2,9 @@ from django.shortcuts import render #함수를 실행하면 html이 실행됨
 from django.contrib.auth import authenticate, login, logout
 from django.shortcuts import redirect
 from .models import User #입력받은 회원정보로 회원가입을 하기 위해서 import 시켜줌
+from django.contrib.auth.hashers import check_password #비밀번호 변경하기 위해서 import 시켜줌 
+
+
 
 def index(request):
     return render(request, 'index.html')
@@ -65,6 +68,59 @@ def login_view(request):   #로그인 페이지를 보여주기 위한 함수
 def logout_view(request):   #로그아웃 페이지를 보여주기 위한 함수
     logout(request)
     return redirect("index")
+
+def modify_view(request): #내 정보 수정 페이지를 보여주기 위한 함수
+    if request.method == 'GET':
+        return render(request, 'mypage.html')
+
+    elif request.method == 'POST':
+        user = request.user
+
+        fullname= request.POST.get('fullname')
+        email = request.POST.get('email')
+        nickname =request.POST.get('nickname')
+
+    
+        user.fullname = fullname
+        user.email = email
+        user.nickname = nickname
+
+        user.save()
+
+        #바로 로그인된 상태로 만들어주고 싶으면 
+        login(request, user)
+        #회원가입 끝나면 로그인 창으로 이동
+        return redirect("mypage")
+
+    return render(request, 'mypage.html') 
+
+
+def change_pw_view(request):
+    if request.method == 'GET':
+        return render(request, 'change_pw.html')
+
+    elif request.method == 'POST':
+        user = request.user
+
+        password1 = request.POST.get('password1')
+        password2 = request.POST.get('password2')
+
+
+        if password1 == password2:       
+            user.set_password(password1)
+            user.save()
+
+            #바로 로그인된 상태로 만들어주고 싶으면 
+            login(request, user)
+
+            #회원가입 끝나면 로그인 창으로 이동
+            return redirect("mypage")
+
+    return render(request, 'change_pw.html') 
+
+def delete_view(request): #탈퇴하기 적용
+    request.user.delete()
+    return redirect('index')
 
 
 def service(request):   #서비스 페이지를 보여주기 위한 함수

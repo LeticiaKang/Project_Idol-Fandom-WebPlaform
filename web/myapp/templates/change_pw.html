@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>회원가입 | HappyVirus</title>
+    <title>비밀번호 변경 | HappyVirus</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -29,7 +29,7 @@
         <!-- .member-service -->
         <section class="member-service">
             <div class="container-xl">
-                <!-- .form-wrapper -->
+
                 <div class="form-wrapper">
                     <form name="frmmypage" id="frmmypage" method="POST" autocomplete="off">
                         <!-- .form-header -->
@@ -40,56 +40,32 @@
 
                         <div class="form-header">
                             <h1 class="logo" lang="en">바이팬</h1>
-                            <h2>내 정보</h2>
+                            <h2>비밀번호 변경</h2>
                         </div>
 
                         <!-- .form-header -->
+
+                        <!-- .form-group -->
+                        <!-- <div class="form-group">
+                            <input type="password" class="form--control" name="password" id="password" placeholder="현재 비밀번호를 입력해주세요" >
+                        </div> -->
+                        <!-- .form-group -->
+
                         <!-- .form-group -->
                         <div class="form-group">
-                            <input type="text" class="form--control" name="fullname" id="fullname" value={{user.fullname}}>
+                            <input type="password" class="form--control" name="password1" id="password1" placeholder="새로운 비밀번호를 입력해주세요">
                         </div>
                         <!-- .form-group -->
 
                         <!-- .form-group -->
                         <div class="form-group">
-                            <table>
-                            <tr>
-                                <td>
-                                    <input type="text" class="form-control" name="username" id="username" value="{{user.username}}" readonly="/" style="height: 55px; width: 200px">
-                                </td>
-                                <td>
-                                    <a href="{% url 'change_pw' %}" class="button button--grey w-45" >비밀번호 변경</a>
-                                </td>
-                            </tr>
-                            </table>
-                        </div>
-                        <!-- .form-group -->
-
-  
-
-                        <!-- .form-group -->
-                        <div class="form-group">
-                            
-                            <input type="text" class="form--control" name="nickname" id="nickname" value= {{user.nickname}}>
-                            
-                        </div>
-                        <!-- .form-group -->
-
-                        <!-- .form-group -->
-                        <div class="form-group mb-4">
-                            <input type="email" class="form--control" name="email" id="email" value={{user.email}}>
+                            <input type="password" class="form--control" name="password2" id="password2" placeholder="비밀번호를 다시 한번 입력해주세요">
                         </div>
                         <!-- .form-group -->
 
                         <!-- .form-group -->
                         <div class="form-group">
-                            <button type="submit" class="button button--primary w-100">수정</button>
-                        </div>
-                        <!-- .form-group -->
-
-                        <!-- .form-group -->
-                        <div class="form-group">
-                            <a href="{% url 'delete' %}" class="button button--grey w-100">탈퇴하기</a>
+                            <button type="submit" class="button button--primary w-100">비밀번호 변경</button>
                         </div>
                         <!-- .form-group -->
 
@@ -118,42 +94,10 @@
 
     <script>
         jQuery(function() {
-            // 변수(상수) 선언
-            const Form = $('#frmmypage');
-            const checkAll = $('#check_all');
-            const checkItems = $('input[name^=agree_]');
-            const totalCheckItems = checkItems.length;
-
-            // 약관 전체동의 체크박스
-            checkAll.on('click', function() {
-                if ( $(this).is(':checked') ) {
-                    checkItems.prop('checked', true);
-                } else {
-                    checkItems.prop('checked', false);
-                }
-            });
-
-            // 각 약관 체크시 전체동의 체크박스 체크/해제
-            checkItems.on('click', function() {
-                let checkedCount = $('input[name^=agree_]:checked').length;
-
-                if ( checkedCount == totalCheckItems ) {
-                    checkAll.prop('checked', true);
-                } else {
-                    checkAll.prop('checked', false);
-                }
-            });
 
             Form.validate({
                 rules: {
-                    'fullname': {
-                        required: true,
-                        minlength: 2
-                    },
-                    // 'username': {
-                    //     required: true,
-                    //     minlength: 3
-                    // },
+                    
                     'password1': {
                         required: true,
                         minlength: 8
@@ -162,21 +106,10 @@
                         required: true,
                         minlength: 8,
                         equalTo: '#password1'
-                    },
-                    'email': {
-                        required: true,
-                        email: true
                     }
                 },
                 messages: {
-                    'fullname': {
-                        required: '이름을 입력해 주세요.',
-                        minlength: '이름은 최소 2글자 이상 입력해 주세요.'
-                    },
-                    // 'username': {
-                    //     required: '아이디를 입력해 주세요.',
-                    //     minlength: '아이디는 최소 3글자 이상 입력해 주세요.'
-                    // },
+                    
                     'password1': {
                         required: '비밀번호를 입력해 주세요.',
                         minlength: '비밀번호는 최소 8글자 이상 입력해 주세요.',
@@ -185,10 +118,6 @@
                         required: '비밀번호를 다시 한번 입력해 주세요.',
                         minlength: '비밀번호는 최소 8글자 이상 입력해 주세요.',
                         equalTo: '비밀번호 값이 일치하지 않습니다.'
-                    },
-                    'email': {
-                        required: '이메일을 입력해 주세요.',
-                        email: '이메일 주소를 올바르게 입력해 주세요.'
                     }
                 },
                 errorPlacement: function(error, element) {

@@ -8,7 +8,8 @@ from django.contrib.auth.models import AbstractUser
 class User(AbstractUser):
     
     #기능 추가
-    #student_id=models.CharField(max_length=10)
+    nickname=models.CharField(max_length=10)
+    fullname=models.CharField(max_length=20)
     
-    pass
+    # pass
 

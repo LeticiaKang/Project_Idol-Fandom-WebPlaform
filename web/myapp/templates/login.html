@@ -133,39 +133,39 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
     <script  src="{% static '/js/vendor/jquery.validate.min.js' %}"></script>
     <script  src="{% static '/js/common.js' %}"></script>
-    <!-- <script>
+    <script>
         jQuery(function() {
             const Form = $('#frmlogin');
             Form.validate({
                 rules: {
-                    'user_id': {
+                    'username': {
                         required: true,
                         minlength: 3
                     },
-                    'user_pw': {
+                    'password': {
                         required: true,
                         minlength: 8
                     }
                 },
                 messages: {
-                    'user_id': {
+                    'username': {
                         required: '아이디를 입력해 주세요.',
                         minlength: '아이디는 최소 3글자 이상 입력해 주세요.'
                     },
-                    'user_pw': {
+                    'password': {
                         required: '비밀번호를 입력해 주세요.',
                         minlength: '비밀번호는 최소 8글자 이상 입력해 주세요.',
                     }
                 },
                 errorPlacement: function(error, element) {
                     error.appendTo( $('.error-container') );
-                },
-                submitHandler: function(form) {
-                    alert('로그인 성공');
-                    
                 }
+                // submitHandler: function(form) {
+                //     alert('로그인 성공');
+                    
+                // }
             });
         });
-    </script>  -->
+    </script> 
 </body>
 </html>

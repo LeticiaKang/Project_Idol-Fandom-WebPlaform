@@ -12,7 +12,7 @@ def register(request):   #회원가입 페이지를 보여주기 위한 함수
     #입력값 받아오기
     if request.method == "POST":
         print(request.POST)
-        firstname = request.POST["firstname"]
+        fullname = request.POST["fullname"]
         username = request.POST["username"]
         password1 = request.POST["password1"]
         password2 = request.POST["password2"]
@@ -25,7 +25,7 @@ def register(request):   #회원가입 페이지를 보여주기 위한 함수
             
             #추가정보
             #user.password2 = password2
-            user.first_name = firstname
+            user.fullname = fullname
             
             #저장
             user.save()

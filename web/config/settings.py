@@ -122,7 +122,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_DIRS=[os.path.join(BASE_DIR, 'myapp', 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
@@ -140,3 +140,7 @@ AUTH_USER_MODEL ='myapp.User'
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.request',
 )
+
+#사용자가 업로드하는 파일을 Django에서는 미디어 파일이라고 부름
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')

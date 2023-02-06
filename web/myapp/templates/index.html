@@ -1,4 +1,4 @@
-{% load static %}
+
 
 <!DOCTYPE html>
 <html lang="ko">
@@ -8,19 +8,20 @@
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HappyVirus</title>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static '/css/vendor/bootstrap-icons.css' %}">
-    <link rel="stylesheet" href="{% static 'css/vendor/normalize.css' %}">
-    <link rel="stylesheet" href="{% static 'css/vendor/aos.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
-    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
-    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
-    <link rel="stylesheet" href="{% static 'css/main.css' %}">
-    <link rel="stylesheet" href="{% static 'css/ui.css' %}">
+    <link rel="stylesheet" href="/static/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/vendor/bootstrap-icons.css">
+    <link rel="stylesheet" href="/static/css/vendor/normalize.css">
+    <link rel="stylesheet" href="/static/css/vendor/aos.min.css">
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/ui.css">
+    
+
 
 </head>
 <body class="main">
@@ -36,12 +37,12 @@
             <!-- .hero-text -->
             <div class="hero-text d-flex h-100">
                 <div class="container-xl">
-                    <h1 lang="en" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">BLACKPINK X 바이팬 <br><strong>HAPPYVIRUS</strong></h1>
+                    <h1 lang="en" data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">BTS X 바이팬 <br><strong>HAPPYVIRUS</strong></h1>
                     
                     <div class="sns-link" data-aos="fade-up" data-aos-duration="600" data-aos-delay="400">
-                        <a href="https://www.instagram.com/blackpinkofficial/" target="_blank" title="블랙핑크 인스타그램 [새창]"><i class="bi bi-instagram"></i></a>
-                        <a href="https://www.youtube.com/c/blackpinkofficial" target="_blank" title="블랙핑크 유튜브 [새창]"><i class="bi bi-youtube"></i></a>
-                        <a href="https://www.facebook.com/BLACKPINKOFFICIAL" target="_blank" title="블랙핑크 페이스북 [새창]"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/bts.bighitofficial/" target="_blank" title="BTS 인스타그램 [새창]"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/channel/UCLkAepWjdylmXSltofFvsYQ" target="_blank" title="BTS 유튜브 [새창]"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.facebook.com/bangtan.official" target="_blank" title="BTS 페이스북 [새창]"><i class="bi bi-facebook"></i></a>
                     </div>
                 </div>
             </div>
@@ -59,18 +60,18 @@
             </div>
             <!-- .flow-img-list -->
             <ul class="flow-img-list">
-                <li><img src="{% static '/images/main/flow_img01.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img02.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img03.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img04.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img05.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img06.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img01.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img02.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img03.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img04.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img05.jpg' %}" alt=""></li>
-                <li><img src="{% static '/images/main/flow_img06.jpg' %}" alt=""></li>
+                <li><img src="/static/images/main/flow_img01.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img02.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img03.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img04.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img05.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img06.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img01.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img02.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img03.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img04.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img05.jpg" alt=""></li>
+                <li><img src="/static/images/main/flow_img06.jpg" alt=""></li>
             </ul>
             <!-- .flow-img-list -->
         </section>
@@ -159,12 +160,12 @@
     {% include "footer.html" %}
     <!-- #footer -->
 
-    <script src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>
-    <script src="{% static '/js/vendor/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static '/js/vendor/aos.min.js"></script>
+    <script src="/static/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="/static/js/vendor/aos.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js' %}"></script>
-    <script src="{% static '/js/common.js' %}"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="/static/js/common.js"></script>
 
 </body>
 </html>

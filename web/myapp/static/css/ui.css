@@ -2,8 +2,8 @@
 /* *********************************************
  * Grid
  ******************************************** */
-.container, .container-xl {padding-left: 24px; padding-right: 24px}
-.container-xl {max-width: 1248px}
+.container, .container-xl {padding-left: 24px; padding-right: 24px;}
+.container-xl {max-width: 1248px;}
 
 /* *********************************************
  * Text

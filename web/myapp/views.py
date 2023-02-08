@@ -133,11 +133,12 @@ def contact(request):   #연락 페이지를 보여주기 위한 함수
 def mypage(request):   #마이페이지를 보여주기 위한 함수
     return render(request, 'mypage.html') 
 
-def upload(request):   #업로드페이지를 보여주기 위한 함수
+def upload(request):   #업로드현황을 보여주기 위한 함수
     return render(request, 'upload.html') 
 
 def collection(request):   #컬렉션페이지를 보여주기 위한 함수
     return render(request, 'collection.html') 
+    
 
 def upload_list(request):   #업로드현황을 보여주기 위한 함수
     return render(request, 'upload_list.html') 

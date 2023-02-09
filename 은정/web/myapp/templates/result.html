@@ -22,7 +22,7 @@
 </head>
 <body>
     <!-- #네비게이션 바 -->
-    {% include "base/navbar.html" %}
+    {% include "navbar.html" %}
     <!-- #네비게이션 바 -->
 
     <!-- #container -->
@@ -33,12 +33,14 @@
                 <h1>Simple image search result</h1>
 
                 <h2>업로드 된 사진:</h2>
+                <img src="{% static upload_image_path %}" height="200px">
                 <!-- query_path : 업로드 된 사진을 저장하여 다시 가져오는 주소-->
                 <h2>검색 결과:</h2>
                 {% for score in scores %}
                 <figure style="float: left; margin-right: 20px; margin-bottom: 20px;">
-                    <img src="{{ score[1] }}" height="200px">
-                    <figcaption>{{ score[0] }}</figcaption>
+
+                    <img src="{% static score.1 %}" height="200px">
+                    <figcaption>{{ score.0 }}</figcaption>
                 </figure>
                 {% endfor %}
 
@@ -49,7 +51,7 @@
     <!-- #container -->
 
     <!-- #footer -->
-    {% include "base/footer.html" %}
+    {% include "footer.html" %}
     <!-- #footer -->
 
     <script src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>

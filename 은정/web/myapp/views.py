@@ -7,7 +7,6 @@ from django.contrib.auth.hashers import check_password #비밀번호 변경하�
 from myapp.models import Image
 from myapp.form import ImageUpload
 
-
 import numpy as np
 from glob import glob
 from PIL import Image as pil_img
@@ -161,30 +160,32 @@ def service(request):   #서비스 페이지를 보여주기 위한 함수
             # print(request.FILES.get("image").file) #<_io.BytesIO object at 0x00000200AE5B72C0>
                 # print(type(request.FILES.get("image").file)) #<class '_io.BytesIO'>
             img = pil_img.open(request.FILES.get("image").file)
-            scores = FindSimilarPicture(img)
-            return render(request, 'result.html', {"scores" : scores})
+            name = str(request.FILES.get("image"))
+            scores = FindSimilarPicture(img, name[0])
+            # print("★★★ 164 scores  ★★★★", scores)
+            upload_image_path = "uploaded/test/" + name
+            return render(request, 'result.html', {"scores" : scores, "upload_image_path":upload_image_path})
 
     else:
         form = ImageUpload()
     img=Image.objects.all()
     return render(request,"service.html",{"img":img,"form":form})
 
-def FindSimilarPicture(file):
+def FindSimilarPicture(img, name:str):
     """
         UploadFileFeature에서 받아온 features, img_paths과
         업로드된 파일의 feature를 추출하여 경로를 계산해 제일 가까운 30개를 return함
         input : request.FILES.get("image").file, return [(dists[id], img_paths[id]) for id in ids]
     """
+    fe = FeatureExtractor()
     features, img_paths = [], []
-    # count = 0
     # 1. 추출한 feature npy파일을 모두 가져와서 객체로 for문 돌리기
-    for feature_path in glob(r"C:\Self_Study\web\myapp\static\feature\*.npy"):
-        img_paths.append(feature_path)
+    for feature_path in glob(rf"C:\Self_Study\web\myapp\static\feature\{name}\*.npy"):
+        img_paths.append(feature_path[31:].replace("feature", "img").replace("npy", "jpg"))
         # print(count, "★★★★★★★", features)
         # print(count, "★★★★★★★", type(features))
         # print(count, "★★★★★★★",type(np.load(feature_path).tolist()))
         features.append(np.load(feature_path))
-        # count+=1
     features = np.array(features)
 
 # print("2-1. ★★★ === Image.objects.lastest('image') ====", Image.objects.last())
@@ -193,9 +194,8 @@ def FindSimilarPicture(file):
 # img = Image.open(Path("web/image/%y/%m/%d")/(str(form.files["image"])))
 # img = pil_img.open(io.BytesIO(Image.objects.last()).read())
 # 2. 유사 사진 찾기
-    print("★★★ 195 ★★★★",features.shape)
     scores= []
-    query = FeatureExtractor.extract(file)
+    query = fe.extract(img)
     print("3. myapp.view =========== 이미지 특성 추출 성공! ===========")
     # print("3-1. ===== query ======", query.shape)
     # print("3-1. ===== query.type ======", type(query))
@@ -204,9 +204,9 @@ def FindSimilarPicture(file):
     # print("3-4. ◆◆◆◆ featurese ======", features)
     dists = np.linalg.norm(features - query, axis=1)   # 업로드 사진과 데이터간 거리(L2 distances) 측정/저장
 
-    ids = np.argsort(dists)[:30]  # np.argsort는 배열안의 숫자를 오름차순해서 인덱스로 표현 해준다. 상위 30개만 ids에 다시 저장
+    ids = np.argsort(dists)  # np.argsort는 배열안의 숫자를 오름차순해서 인덱스로 표현 해준다. 상위 30개만 ids에 다시 저장
     scores = [(dists[id], img_paths[id]) for id in ids]    # 그래서 for문으로 dists[id]에 넣으면 인덱스 역할을 해서 순서대로 뽑힘.
-
+    print(scores[:10])
     return scores
 
 

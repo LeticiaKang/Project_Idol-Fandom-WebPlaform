@@ -16,7 +16,7 @@ from PIL import Image as pil_img
 from myapp.feature_extractor import FeatureExtractor
 
 from .models import Posting, Comment
-from .forms import PostingModelForm, CommentModelForm
+from .form import PostingModelForm, CommentModelForm
 
 def index(request):
     return render(request, 'index.html')

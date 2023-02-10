@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>로그인 | HappyVirus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/vendor/normalize.css">
+    <link rel="stylesheet" href="/static/css/fonts.css">
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <link rel="stylesheet" href="/static/css/layout.css">
+    <link rel="stylesheet" href="/static/css/sub.css">
+    <link rel="stylesheet" href="/static/css/ui.css">
+</head>
+<body>
+    <!-- #네비게이션 바 -->
+    {% include "navbar.html" %}
+    <!-- #네비게이션 바 -->
+    
+    <!-- username과 password 값이 일치하면 -->
+    <!-- {% if user.is_authenticated %}
+        <br><br><br><br>
+        로그인 성공!
+        {{user.first_name}}님 환영합니다.
+        <br><br><br><br>
+        <a href="{%url 'logout' %}" >로그아웃</a> -->
+
+    <!-- username과 password 값이 일치하지 않으면 -->
+    <!-- {% else %} -->
+
+    <!-- #container -->
+    <main id="container" role="main">
+        <!-- .member-service -->
+        <section class="member-service">
+            <div class="container-xl">
+                <!-- .form-wrapper -->
+                <div class="form-wrapper">
+                    <form name="frmlogin" id="frmlogin" method="POST" autocomplete="off">
+
+                        <!-- post 제출할 때 필수적으로 작용 -->
+                        {% csrf_token %}
+                        <!-- post 제출할 때 필수적으로 작용 -->
+
+                        <!-- .form-header -->
+                        <div class="form-header">
+                            <h1 class="logo" lang="en">바이팬</h1>
+                            <h2>원하는 연예인의 사진을 찾을 땐, <br>역시 바이팬에서.</h2>
+                        </div>
+                        <!-- .form-header -->
+
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <input type="text" class="form--control" name="username" id="username" placeholder="아이디">
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group mb-4">
+                            <input type="password" class="form--control" name="password" id="password" placeholder="비밀번호">
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group mb-4">
+                            <!-- .row -->
+                            <div class="row align-items-center justify-content-between">
+                                <div class="col-auto">
+                                    <div class="custom-check-wrapper">
+                                        <label>
+                                            <input type="checkbox" class="custom-check" name="chk_auto_login" id="chk_auto_login">
+                                            <span>자동 로그인</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <a href="#none" class="find-password">비밀번호 찾기</a>
+                                </div>
+                            </div>
+                            <!-- .row -->
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <button type="submit" class="button button--primary w-100">로그인</button> 
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .form-group -->
+                        <div class="form-group">
+                            <a href="{% url 'join' %}" class="button button--grey w-100">회원가입</a>
+                        </div>
+                        <!-- .form-group -->
+
+                        <!-- .error-container -->
+                        <div class="error-container"></div>
+                        <!-- .error-container -->
+
+                        <!-- .home-link -->
+                        <div class="home-link pt-4">
+                            <a href="{% url 'index' %}">메인으로 돌아가기</a>
+                        </div>
+                        <!-- .home-link -->
+                    </form>
+                    
+                </div>
+                <!-- .form-wrapper -->
+            </div>
+        </section>
+        <!-- .member-service -->
+        
+    </main>
+    <!-- #container -->
+
+    <!-- #footer -->
+    {% include "footer.html" %}
+    <!-- #footer -->
+
+    <!-- {% endif %}  -->
+    <!-- username과 password 값이 일치하지 않으면 -->
+    
+    
+    <script src="/assets/js/vendor/jquery-3.4.1.min.js"></script>
+    <script src="/assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+    <script src="/assets/js/vendor/jquery.validate.min.js"></script>
+    <script src="/assets/js/common.js"></script>
+    <script>
+        jQuery(function() {
+            const Form = $('#frmlogin');
+            Form.validate({
+                rules: {
+                    'username': {
+                        required: true,
+                        minlength: 3
+                    },
+                    'password': {
+                        required: true,
+                        minlength: 8
+                    }
+                },
+                messages: {
+                    'username': {
+                        required: '아이디를 입력해 주세요.',
+                        minlength: '아이디는 최소 3글자 이상 입력해 주세요.'
+                    },
+                    'password': {
+                        required: '비밀번호를 입력해 주세요.',
+                        minlength: '비밀번호는 최소 8글자 이상 입력해 주세요.',
+                    }
+                },
+                errorPlacement: function(error, element) {
+                    error.appendTo( $('.error-container') );
+                }
+                // submitHandler: function(form) {
+                //     alert('로그인 성공');
+                    
+                // }
+            });
+        });
+    </script> 
+</body>
+</html>

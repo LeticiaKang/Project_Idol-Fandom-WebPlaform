@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %} {% endblock title %}
+
+{% block body %}
+{% comment %} 컨테이너 안에 가로 칸을 주고 마진 탑 3칸을 준다 {% endcomment %}
+<div class="row mt-3">
+    <div class="col-12 col-md 6">
+        <div class="card">
+        {% if posting.image %}
+            <img class="card-img-top image-fluid" src="{{ posting.image.url }}" alt="{{ posting.image }}">
+            <!-- 여기다가 좋아요 기능 -->
+        {% else %}
+            <img class="card-img-top image-fluid" src="https://picsum.photos/500/200" alt="random-image">
+        {% endif %}
+
+            <div class="card-body">
+                <i class="{{ posting.icon }} fa-2x" ></i>
+                <hr>
+                <div class="row">
+                    <div class="col-10">
+                        <p class="card-text">{{ posting.content }}</p>
+                    </div>
+                    <div class="col-2">
+                        <form action="{% url 'delete_posting' posting.id %}" method="POST">
+                        {% csrf_token %}
+                        <button>
+                            <i class="fas fa-trash"></i>
+                        </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include '_comment.html' %}
+</div>
+{% endblock body %}

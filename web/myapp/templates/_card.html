@@ -1,0 +1,13 @@
+<article class="card mb-2">
+    <a href="{{ posting.get_absolute_url }}">
+        {% if posting.image %}
+            <img src="{{ posting.image.url }}" alt="{{ posting.image }}" class="card-img-top image-fluid">
+        {% else %}
+            <img src="https://picsum.photos/200/300" alt="random-image-{{forloop.counter}}" class="card-img-top image-fluid">
+        {% endif %}
+    </a>
+    <div class="card-body">
+        <i class="fa-2x {{ posting.icon }}"></i>
+        {{ posting.content }}
+    </div>
+</article>

@@ -40,12 +40,12 @@
         {% if forloop.first %}
         <div class="row ">
             {% endif %}
-            <div class="col-lg-4 col-md-4 col-12">
+            <div class="col-lg-4 col-md-1 col-12">
                 
                 <div class="text-center mt-2">
-                                    
-                    <img src="{{x.image.url}}"  style="height: 50%; width:50%; border-radius: 20px;" class="img-thumbnail" alt="...">
-                        
+                    <a href="{% url 'detail' %}">             
+                        <img src="{{x.image.url}}"  style="height: 50%; width:50%; border-radius: 20px;" class="img-thumbnail" alt="...">
+                    </a>  
                 </div>
             </div>
             <!-- forloop.counter 변수는 for 루프를 실행한 횟수를 담고 있는 템플린 변수 -->

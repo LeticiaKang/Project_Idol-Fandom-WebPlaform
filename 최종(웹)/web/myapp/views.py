@@ -7,6 +7,7 @@ from myapp.models import Image
 from myapp.form import ImageUpload
 
 import numpy as np
+from myapp.Route import route
 from glob import glob
 from PIL import Image as pil_img
 from myapp.feature_extractor import FeatureExtractor
@@ -175,12 +176,13 @@ def FindSimilarPicture(img, name:str):
         UploadFileFeature에서 받아온 features, img_paths과
         업로드된 파일의 feature를 추출하여 경로를 계산해 제일 가까운 30개를 return함
         input : request.FILES.get("image").file, return [(dists[id], img_paths[id]) for id in ids]
-    """#C:\은정\web\myapp\static\feature\뷔
+    """
     fe = FeatureExtractor()
     features, img_paths = [], []
     # count = 1
     # 1. 추출한 feature npy파일을 모두 가져와서 객체로 for문 돌리기
-    for feature_path in glob(rf"C:\은정\web\myapp\static\feature\{name}\*.npy"):
+    print("현재 경로", route())
+    for feature_path in glob(rf"{route()}\static\feature\{name}\*.npy"):
         img_paths.append(feature_path.replace("feature", "img").replace("npy", "jpg"))
         # print(img_paths)
         # print(count, "★★★★★★★", feature_path)
@@ -208,5 +210,4 @@ def FindSimilarPicture(img, name:str):
 
     ids = np.argsort(dists)  # np.argsort는 배열안의 숫자를 오름차순해서 인덱스로 표현 해준다. 상위 30개만 ids에 다시 저장
     scores = [(dists[id], img_paths[id]) for id in ids]    # 그래서 for문으로 dists[id]에 넣으면 인덱스 역할을 해서 순서대로 뽑힘.
-    print(scores[:10])
     return scores

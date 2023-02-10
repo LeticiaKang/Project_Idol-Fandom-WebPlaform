@@ -6,7 +6,7 @@ class PostingModelForm(forms.ModelForm):  # data의 입력과 검증 & HTML
 
     class Meta:  # Meta안에 숨겨놓은거임
         model = Posting
-        fields = ('content', 'image', 'icon')
+        fields = ('content', 'image') #, 'icon'
 
 class CommentModelForm(forms.ModelForm):
     content = forms.CharField(min_length=2, max_length=200)

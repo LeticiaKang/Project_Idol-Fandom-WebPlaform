@@ -24,7 +24,7 @@ class User(AbstractUser):
 
 class Posting(models.Model):
     content = models.TextField()
-    icon = models.CharField(max_length=30, default='')
+    # icon = models.CharField(max_length=30, default='')
     image = models.ImageField(blank=True)  # pip install pillow / 폴더: upload_to="img/%y"
 
     created_at = models.DateTimeField(auto_now_add=True)  # 추가될때만!! add될때 한번 저장되고 끝남

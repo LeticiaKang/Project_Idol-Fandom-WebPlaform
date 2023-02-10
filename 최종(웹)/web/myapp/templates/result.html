@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>서비스 이용하기 | HappyVirus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/bootstrap-icons.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vendor/aos.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sub.css' %}">
+    <link rel="stylesheet" href="{% static 'css/ui.css' %}">
+</head>
+<body>
+    <!-- #네비게이션 바 -->
+    {% include "navbar.html" %}
+    <!-- #네비게이션 바 -->
+
+    <!-- #container -->
+    <main id="container" role="main">
+        <!-- .service -->
+        <section class="section service">
+            <div class="container-xl" style="text-align: center;">
+                <h1>Simple image search result</h1>
+                <br>
+                <h2>업로드 된 사진</h2>
+                <br>
+                <img src="{% static upload_image_path %}" height="200px">
+                <!-- query_path : 업로드 된 사진을 저장하여 다시 가져오는 주소-->
+                <hr>
+                <h2>검색 결과</h2>
+                <br>
+                <div class="image_result" style="align-content: center;">
+                    {% for score in scores %}
+                    <figure style="float: left; margin-right: 20px; margin-bottom: 20px;">
+
+                        <img src="{% static score.1 %}" height="200px">
+                    </figure>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <!-- .service -->
+    </main>
+    <!-- #container -->
+
+    <!-- #footer -->
+    {% include "footer.html" %}
+    <!-- #footer -->
+
+    <script src="{% static '/js/vendor/jquery-3.4.1.min.js' %}"></script>
+    <script src="{% static '/js/vendor/bootstrap.bundle.min.js' %}"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>    
+    <script src="{% static '/js/vendor/aos.min.js' %}"></script>
+    <script src="{% static '/js/common.js' %}"></script>
+
+</body>
+</html>

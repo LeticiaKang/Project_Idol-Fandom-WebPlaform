@@ -24,6 +24,9 @@
                     <div class="col-2">
                         <form action="{% url 'delete_posting' posting.id %}" method="POST">
                         {% csrf_token %}
+                        <!-- <button>
+                            <i class="bi bi-heart"></i>
+                        </button> -->
                         <button>
                             <i class="fas fa-trash"></i>
                         </button>

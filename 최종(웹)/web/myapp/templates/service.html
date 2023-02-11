@@ -27,20 +27,53 @@
     {% include "navbar.html" %}
     <!-- #네비게이션 바 -->
 
+   <!-- #container -->
+   <main id="container" role="main">
+    <!-- .service -->
+    <section class="section service">
+        <div class="container-xl">
+            <form action="service" method="post" enctype="multipart/form-data" style="margin-top: 50px;">
+                <!-- .upload-area-wrapper -->
+                <div class="upload-area-wrapper">
+                    <h3>파일을 업로드해 주세요</h3>
+                    <!-- .draggable-zone -->
+                    <div class="draggable-zone">
+                        <div class="inner-content">
+                            <div class="icon">
+                                <i class="bi bi-images"></i>
+                            </div>  
+                            
+                                {% csrf_token %}
+                                {{ form.as_p }}
+                                <!-- <button type="submit" class="btn btn-lg btn-success">Uplaod</button> -->
+                        
+                          
+                            <input type="file" name="photo" id="photo" hidden>
+                            <p class="mt-4">지원되는 파일 : JPEG, JPG, PNG</p>
+                        </div>
+                    </div>
+                    <!-- .draggable-zone -->
+                </div>
+                <!-- .upload-area-wrapper -->
 
-    <form action="service" method="post" enctype="multipart/form-data" style="margin-top: 200px; text-align: center;">
+                <!-- .info-list -->
+                <ul class="info-list mt-4">
+                    <li>최대 업로드 가능한 사진 용량은 5MB 입니다.</li>
+                    <li>실제 사진이 아닌 그림 유형 혹은 인식이 불가능한 사진 등은 정확한 결과가 나오지 않아요.</li>
+                </ul>
+                <!-- .info-list -->
 
-        {% csrf_token %}
-        {{ form.as_p }}
-            <button type="submit" class="btn btn-lg btn-success">Uplaod</button>
-
-    </form>
-
-    <ul class="info-list mt-4" style="text-align: center;">
-        <li>최대 업로드 가능한 사진 용량은 5MB 입니다.</li>
-    </ul>
-
-    <hr>
+                <!-- .submit-button -->
+                <div class="submit-button">
+                    <button type="submit" class="btn btn--lg px-5 btn-success">Upload</button>
+                </div>
+                <!-- .submit-button -->
+            </form>
+        </div>
+    </section>
+    <!-- .service -->
+</main>
+<!-- #container -->
 
 
     <!-- #footer -->

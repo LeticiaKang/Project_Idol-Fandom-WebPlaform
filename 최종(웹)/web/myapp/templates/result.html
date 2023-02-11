@@ -26,25 +26,27 @@
     <!-- #네비게이션 바 -->
 
     <!-- #container -->
-    <main id="container" role="main">
+    <main id="container">
         <!-- .service -->
         <section class="section service">
-            <div class="container-xl" style="text-align: center;">
-                <h1>Simple image search result</h1>
+            <div class="container_1" style="text-align: center; padding: 10%; padding-top: 15px;">
+                <!-- <h1>Simple image search result</h1> -->
                 <br>
                 <h2>업로드 된 사진</h2>
                 <br>
-                <img src="{% static upload_image_path %}" height="200px">
+                <img src="{% static upload_image_path %}" style="height:400px; width:300px; border-radius: 20px; margin-bottom: 30px;">
                 <!-- query_path : 업로드 된 사진을 저장하여 다시 가져오는 주소-->
                 <hr>
-                <h2>검색 결과</h2>
+                <h2 style="margin-top: 20px;">검색 결과</h2>
                 <br>
-                <div class="image_result" style="align-content: center;">
+                <div class="image_result" style="align-content: center; margin-top: 20px;">
                     {% for score in scores %}
                     <figure style="float: left; margin-right: 20px; margin-bottom: 20px;">
 
-                        <img src="{% static score.1 %}" height="200px">
-                        <figcaption>{{ score.0 }}</figcaption>
+                        <img src="{% static score.1 %}" style="height:400px; width:300px; border-radius: 20px;">
+                        <!-- <figcaption>{{ score.0 }}</figcaption> -->
+                        <br>
+                        <input type="button" value="저장" style="text-align: center; margin-top: 10px;"/>
                     </figure>
                     {% endfor %}
                 </div>

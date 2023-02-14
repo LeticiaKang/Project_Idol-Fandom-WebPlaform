@@ -2,7 +2,7 @@
 /* *********************************************
  * Hero
  ******************************************** */
-.hero {height: 100vh; background-image: url(../images/main/hero_bg.jpg)}
+.hero { background-image: url(../images/main/hero_bg.jpg)}
 .hero .hero-text {text-align: center; padding-top: 300px}
 .hero .hero-text h1 {font-size: 56px; font-weight: 700; color: #000; line-height: 68px}
 .hero .hero-text h1 span {font-size: 0.9em; font-weight: 700; letter-spacing: 0.05em}

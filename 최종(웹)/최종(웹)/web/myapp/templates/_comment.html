@@ -1,0 +1,44 @@
+{% comment %} 댓글 폼 {% endcomment %}
+<div class="col-12 col-md-6">
+    <div class="card-mb-2">
+        <div class="card-body">
+            <form action="{% url 'create_comment' posting.id %}" method="POST">
+                {% csrf_token %}
+                <label for="comment">leave comment</label>
+                <input type="text" name="content" id="comment" class="form-control" autofocus>
+        </form>
+        </div>
+    </div>
+    {% comment %} 댓글 보여주는 곳 {% endcomment %}
+    <div class="card">
+        <ul class="list-group list-group-flush">
+            {% if comments %}
+                {% for comment in comments %}
+                    <li class="list-group-item mb-1">
+                        <div class="row">
+
+                            <div class="col-10">
+                            익명{{ forloop.counter }}: {{ comment.content }}
+                            </div>
+
+                            <div class="col-2">
+                                <form action="{% url 'delete_comment' posting.id comment.id %}" method="POST">
+                                {% csrf_token %}
+                                <button>
+                                    <i class="fas fa-trash"></i>
+                                </button>
+                                </form>
+                            </div>
+                            
+                        </div>
+                    </li>
+                {% endfor %}
+            {% else %}
+                <li class="list-group-item mb-1">No comments yet...</li>
+            {% endif %}
+        </ul>
+    </div>
+
+
+
+</div>

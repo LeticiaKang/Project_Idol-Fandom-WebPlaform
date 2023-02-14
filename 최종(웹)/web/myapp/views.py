@@ -214,7 +214,7 @@ def FindSimilarPicture(img, name:str):
     # print("3-4. ◆◆◆◆ featurese ======", features)
     dists = np.linalg.norm(features - query, axis=1)   # 업로드 사진과 데이터간 거리(L2 distances) 측정/저장
 
-    ids = np.argsort(dists)[:10]   # np.argsort는 배열안의 숫자를 오름차순해서 인덱스로 표현 해준다. 상위 30개만 ids에 다시 저장
+    ids = np.argsort(dists)[:10]   # np.argsort는 배열안의 숫자를 오름차순해서 인덱스로 표현 해준다. 상위 10개만 ids에 다시 저장
     scores = [(dists[id] , img_paths[id]) for id in ids]   # 그래서 for문으로 dists[id]에 넣으면 인덱스 역할을 해서 순서대로 뽑힘.
     return scores
 

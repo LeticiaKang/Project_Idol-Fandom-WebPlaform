@@ -16,7 +16,7 @@ if __name__ == '__main__':
             feature = fe.extract(img=Image.open(img_path))
 
             # Save the Numpy array (.npy) on designated path
-            feature_path = Path(path) / (img_path.stem + ".npy")  
+            feature_path = Path(path) / (img_path.stem + ".npy")
             print(feature_path)
 
             np.save(feature_path, feature)

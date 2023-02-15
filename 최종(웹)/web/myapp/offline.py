@@ -8,7 +8,7 @@ if __name__ == '__main__':
     fe = FeatureExtractor()
 
     # Iterate through images (Change the path based on your image location)
-    for path in glob(r"web\\myapp\\static\\img\\*"):
+    for path in glob("C:\Self_Study\HappyVirus\최종(웹)\web\myapp\static\img\*"):
         for img_path in Path(path).glob("*.jpg"):
             print(img_path)
 

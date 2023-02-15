@@ -1,3 +1,4 @@
+import tensorflow.keras.models
 from tensorflow.keras.preprocessing import image
 # from tensorflow.keras.applications.xception import Xception, preprocess_input
 from tensorflow.keras.applications.inception_resnet_v2 import InceptionResNetV2, preprocess_input
@@ -10,9 +11,9 @@ class FeatureExtractor:
     def __init__(self):
         
         # Use model as the architecture and ImageNet for the weight
-        base_model = InceptionResNetV2(weights='imagenet') # 이미지넷의 학습 카테고리는 무엇인지, 어떤 가중치를 사용했는지
+        # base_model = InceptionResNetV2(weights='imagenet') # 이미지넷의 학습 카테고리는 무엇인지, 어떤 가중치를 사용했는지
 
-        self.model = Model(inputs=base_model.input, outputs=base_model.layers[-1].output)
+        self.model = tensorflow.keras.models.load_model("./static/model/InceprionResnetV2_epoch_9_batch_32.h5")
 
     def extract(self, img):
         # 모델에 맞게 input할 image의 크기를 resizing한다.

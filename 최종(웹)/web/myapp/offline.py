@@ -8,7 +8,7 @@ if __name__ == '__main__':
     fe = FeatureExtractor()
 
     # Iterate through images (Change the path based on your image location)
-    for path in glob(r"c:\\Self_Study\\HappyVirus\\최종(웹)\\web\\myapp\\static\\img\\*"):
+    for path in glob(r"web\\myapp\\static\\img\\*"):
         for img_path in Path(path).glob("*.jpg"):
             print(img_path)
 
@@ -16,7 +16,7 @@ if __name__ == '__main__':
             feature = fe.extract(img=Image.open(img_path))
 
             # Save the Numpy array (.npy) on designated path
-            feature_path = Path(path) / (img_path.stem + ".npy")
+            feature_path = Path(path.replace("img", "feature")) / (img_path.stem + ".npy")
             print(feature_path)
 
             np.save(feature_path, feature)

@@ -12,8 +12,8 @@ class FeatureExtractor:
         
         # Use model as the architecture and ImageNet for the weight
         # base_model = InceptionResNetV2(weights='imagenet') # 이미지넷의 학습 카테고리는 무엇인지, 어떤 가중치를 사용했는지
-
-        self.model = tensorflow.keras.models.load_model("./static/model/InceprionResnetV2_epoch_9_batch_32.h5")
+        # MODEL_PATH = './static/model/InceprionResnetV2_epoch_9_batch_32.h5'
+        self.model = tensorflow.keras.models.load_model("C:\Self_Study\HappyVirus\최종(웹)\web\myapp\static\model\InceprionResnetV2_epoch_9_batch_32.h5")
 
     def extract(self, img):
         # 모델에 맞게 input할 image의 크기를 resizing한다.

@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block title %} {% endblock title %}
+{% block body %}
+
+{% if postings %}
+    <section class="card-columns">
+        {% for posting in postings %}
+            {% include '_card.html' %}
+        {% endfor %}
+    </section>
+{% else%}
+    <h2 style="margin-top:350px;text-align: center;"><b>업로드 된 피드가 없습니다.</b></h2>
+
+{% endif %}
+{% endblock body %}

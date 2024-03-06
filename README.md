@@ -10,12 +10,4 @@
         - 여러 모델을 비교해보고 최적의 모델을 선정하며 튜닝할 수 있도록 한다.
       - 개발된 모델과 DB, 웹사이트가 유기적으로 잘 작동할 수 있도록 한다.
 ### 3. 개발환경
-      - 프론트엔드
-        - HTML, CSS, Bootstrap, JS
-      - 백엔드
-        - Python, Django
-      - DB
-        - MySQL
-      - 알고리즘 모델 개발
-       - Python, Tensorflow, Keras
 

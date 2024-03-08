@@ -47,11 +47,7 @@
 
 | **사진 업로드** | **업로드 후 검색결과** |
 | --- | --- | 
-| ![사진 업로드](https://github.com/LeticiaKang/Project_board/assets/87592790/e4397499-7832-4830-8279-ec18214d77a1) | ![업로드 후 검색결과](https://github.com/LeticiaKang/Project_board/assets/87592790/2eb0f89a-e61d-42d5-89c3-845fcbf77215) | 
-
-| 결과 화면 |   |
-| --- | --- |
-|![검색결과를 컬렉션으로 저장](https://github.com/LeticiaKang/Project_board/assets/87592790/f8f57c5a-182f-44d3-9a86-a6fb46f8572c) |   |
+| ![사진 업로드](https://github.com/LeticiaKang/Project_Idol-Fandom-WebPlaform/assets/87592790/d5de09ce-2450-4c46-bd94-6eefe6f4d2ae) | ![업로드 후 검색결과](https://github.com/LeticiaKang/Project_board/assets/87592790/2eb0f89a-e61d-42d5-89c3-845fcbf77215) | 
 
 | 게시글 | 댓글 |
 | --- | --- |

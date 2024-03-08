@@ -23,7 +23,7 @@
   - AbstractUser 상속을 통한 인증 시스템 구축
 - **DL모델 구축**
   - SSD, Inception, InceptionResnet 등 CNN 기반의 다양한 모델을 학습시켜 비교
-  - 비교 : EfficientnetV2s, InceptionResnetV2, InceptionV3, Resnet50, SSD, VGG16, yoloV5
+  - 비교 : EfficientnetV2s, InceptionResnetV2, InceptionV3, Resnet50, SSD, VGG19, yoloV5
       - 최종적으로 InceptionResnetV2를 이용하여 정확도 85%로 구현 완료
   - 알고리즘 구축 내용 정리 : https://github.com/LeticiaKang/DL_Image-Classification
 - **웹과 DL모델 연결**

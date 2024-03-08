@@ -49,10 +49,6 @@
 | --- | --- | 
 | ![사진 업로드](https://github.com/LeticiaKang/Project_board/assets/87592790/e4397499-7832-4830-8279-ec18214d77a1) | ![업로드 후 검색결과](https://github.com/LeticiaKang/Project_board/assets/87592790/2eb0f89a-e61d-42d5-89c3-845fcbf77215) | 
 
-| 결과 화면 |   |
-| --- | --- |
-|![검색결과를 컬렉션으로 저장](https://github.com/LeticiaKang/Project_board/assets/87592790/f8f57c5a-182f-44d3-9a86-a6fb46f8572c) |   |
-
 | 게시글 | 댓글 |
 | --- | --- |
 |![image](https://github.com/LeticiaKang/Project_board/assets/87592790/ffb778b2-cfb0-4f2e-a77c-628cf4ab2340)|![image](https://github.com/LeticiaKang/Project_board/assets/87592790/b90e6e80-857c-49bf-9c85-21902dad112e)|
